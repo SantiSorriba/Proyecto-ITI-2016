@@ -1,0 +1,137 @@
+#!/bin/bash	
+opc=0;
+opc1=0;
+usuario="";
+grupo="";
+function menu {
+clear
+echo "1) Buscar un usuario"
+echo "2) Buscar un grupo"
+echo "3) Modificar el home de un usuario"
+echo "4) Modificar el GID de un grupo"
+echo "5) Salir"
+}
+function buscarusuario {
+clear
+read -p "Ingrese el usuario a buscar: " usuario
+id $usuario;
+read -p "Presione enter para continuar."
+}
+function retorno1 {
+clear
+echo "1) Buscar Usuario"
+echo "2) Volver"
+read -p "Ingrese la opcion deseada: " opc1
+}
+function buscargrupo {
+clear
+read -p "Ingrese el grupo a buscar: " grupo
+}
+function retorno2 {
+clear
+echo "1) Buscar Grupo"
+echo "2) Volver"
+read -p "Ingrese la opcion deseada: " opc1
+}
+function editarhome {
+clear
+read -p "Ingrese el usuario a editar el home: "
+}
+function retorno3 {
+clear
+echo "1) Editar el home de un usuario"
+echo "2) Volver"
+read -p "Ingrese la opcion deseada: " opc1
+}
+function editargid{
+clear
+read -p "Ingrese el nombre de grupo a editar el GID: "
+}
+function retorno4 {
+clear
+echo "1) Editar el GID de un grupo"
+echo "2) VOlver"
+read -p "Ingrese la opcion deseada: " opc1
+}
+while [ $opc -ne 5 ]
+do
+menu
+read -p "Ingrese la opcion deseada: " opc
+case $opc in
+	1) 
+	  clear
+	  retorno1
+	  case $opc1 in
+		1)
+		  buscarusuario
+		  ;;
+		2)
+		  menu
+		  ;;
+		*) 
+		  read -p "Error, la opcion no es correcta"
+		  retorno1
+		  ;;
+	  esac
+	  ;;
+	2)
+	  clear
+	  retorno2
+	  case $opc1 in
+		1) 
+		  buscargrupo
+		  ;;
+		2) 
+		  menu
+		  ;;
+		*)
+		  read -p "Error, la opcion no es correcta"
+		  retorno2
+		  ;;
+	  esac
+	  ;;
+	3)
+	  clear
+	  retorno3
+	  case $opc1 in
+		1)
+		  editarhome
+		  ;;
+		2)
+		  menu
+		  ;;
+		*)
+		  read -p "Error, la opcion no es correcta"
+		  retorno3
+		  ;;
+	  esac
+	  ;;
+	4)
+	  clear
+	  retorno4
+	  case $opc1 in
+		1) 
+		  editargid
+		  ;;
+		2) 
+		  menu
+		  ;;
+		*)
+		  read-p "Error, la opcion no es correcta"
+		  retorno4
+		  ;;
+	  esac
+	  ;;
+	5) 
+	  clear
+	  echo "Hasta luego!"
+	  read -p "Santiago Sorriba, Federico Iza, Joaquin Barzi, Paulo Machin"
+	  ;;
+	*)
+	  read -p "Error, la opcion ingresada no existe. Verifique su opcion"
+	  menu
+	  ;;
+ esac
+done
+	
+		
