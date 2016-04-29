@@ -43,14 +43,14 @@ echo "1) Editar el home de un usuario"
 echo "2) Volver"
 read -p "Ingrese la opcion deseada: " opc1
 }
-function editargid{
+function editargid {
 clear
 read -p "Ingrese el nombre de grupo a editar el GID: "
 }
 function retorno4 {
 clear
 echo "1) Editar el GID de un grupo"
-echo "2) VOlver"
+echo "2) Volver"
 read -p "Ingrese la opcion deseada: " opc1
 }
 while [ $opc -ne 5 ]
