@@ -5,7 +5,6 @@ usuario="";
 grupo="";
 function menu {
 clear
-
 echo "1) Buscar un usuario"
 echo "2) Buscar un grupo"
 echo "3) Modificar el home de un usuario"
