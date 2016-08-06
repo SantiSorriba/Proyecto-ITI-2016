@@ -90,4 +90,8 @@
     Private Sub OrdeñesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OrdeñesToolStripMenuItem.Click
         frmOrdenies.Show()
     End Sub
+
+    Private Sub lblFecha_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblFecha.Click
+
+    End Sub
 End Class

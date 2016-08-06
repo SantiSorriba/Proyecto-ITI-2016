@@ -44,12 +44,12 @@ Partial Class frmPrincipal
         Me.menuAltas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBajas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuConsultarAnimal = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdeñesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAgregarUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuModificarUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBajaUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblFecha = New System.Windows.Forms.Label()
-        Me.OrdeñesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,25 +72,25 @@ Partial Class frmPrincipal
         'menuIngreso
         '
         Me.menuIngreso.Name = "menuIngreso"
-        Me.menuIngreso.Size = New System.Drawing.Size(150, 22)
+        Me.menuIngreso.Size = New System.Drawing.Size(152, 22)
         Me.menuIngreso.Text = "Ingreso"
         '
         'menuCerrarSesion
         '
         Me.menuCerrarSesion.Name = "menuCerrarSesion"
-        Me.menuCerrarSesion.Size = New System.Drawing.Size(150, 22)
+        Me.menuCerrarSesion.Size = New System.Drawing.Size(152, 22)
         Me.menuCerrarSesion.Text = "Cerrar Sesión"
         '
         'menuConfiguracion
         '
         Me.menuConfiguracion.Name = "menuConfiguracion"
-        Me.menuConfiguracion.Size = New System.Drawing.Size(150, 22)
+        Me.menuConfiguracion.Size = New System.Drawing.Size(152, 22)
         Me.menuConfiguracion.Text = "Configuración"
         '
         'menuSalir
         '
         Me.menuSalir.Name = "menuSalir"
-        Me.menuSalir.Size = New System.Drawing.Size(150, 22)
+        Me.menuSalir.Size = New System.Drawing.Size(152, 22)
         Me.menuSalir.Text = "Salir"
         '
         'menuEstablecimientos
@@ -187,6 +187,12 @@ Partial Class frmPrincipal
         Me.menuConsultarAnimal.Size = New System.Drawing.Size(164, 22)
         Me.menuConsultarAnimal.Text = "Consultar animal"
         '
+        'OrdeñesToolStripMenuItem
+        '
+        Me.OrdeñesToolStripMenuItem.Name = "OrdeñesToolStripMenuItem"
+        Me.OrdeñesToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.OrdeñesToolStripMenuItem.Text = "Ordeñes"
+        '
         'menuUsuarios
         '
         Me.menuUsuarios.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuAgregarUsuario, Me.menuModificarUsuario, Me.menuBajaUsuario})
@@ -222,12 +228,6 @@ Partial Class frmPrincipal
         Me.lblFecha.Size = New System.Drawing.Size(173, 32)
         Me.lblFecha.TabIndex = 1
         Me.lblFecha.Text = "dd/mm/yyyy"
-        '
-        'OrdeñesToolStripMenuItem
-        '
-        Me.OrdeñesToolStripMenuItem.Name = "OrdeñesToolStripMenuItem"
-        Me.OrdeñesToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.OrdeñesToolStripMenuItem.Text = "Ordeñes"
         '
         'frmPrincipal
         '
