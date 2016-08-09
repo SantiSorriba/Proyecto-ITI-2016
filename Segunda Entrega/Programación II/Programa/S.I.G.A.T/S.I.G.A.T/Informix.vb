@@ -1,3 +1,0 @@
-﻿Module Informix
-    
-End Module
