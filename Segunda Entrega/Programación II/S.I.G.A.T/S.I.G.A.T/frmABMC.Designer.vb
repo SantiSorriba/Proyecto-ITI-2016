@@ -26,11 +26,18 @@ Partial Class frmABMC
         Me.txtNumId = New System.Windows.Forms.TextBox()
         Me.cmdBuscar = New System.Windows.Forms.Button()
         Me.panelAnimales = New System.Windows.Forms.Panel()
+        Me.lblKg = New System.Windows.Forms.Label()
+        Me.txtPeso = New System.Windows.Forms.TextBox()
+        Me.lblPeso = New System.Windows.Forms.Label()
+        Me.rdoHembra = New System.Windows.Forms.RadioButton()
+        Me.rdoMacho = New System.Windows.Forms.RadioButton()
+        Me.lblSexo = New System.Windows.Forms.Label()
         Me.cboLugarActual = New System.Windows.Forms.ComboBox()
         Me.lblLugarActual = New System.Windows.Forms.Label()
         Me.cmdEliminar = New System.Windows.Forms.Button()
         Me.cmdModificar = New System.Windows.Forms.Button()
         Me.cmdAgregar = New System.Windows.Forms.Button()
+        Me.txtNumeroIdentificador = New System.Windows.Forms.TextBox()
         Me.cboTipoAnimal = New System.Windows.Forms.ComboBox()
         Me.lblTipo = New System.Windows.Forms.Label()
         Me.dateNacimiento = New System.Windows.Forms.DateTimePicker()
@@ -42,7 +49,6 @@ Partial Class frmABMC
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.cmdVerificar = New System.Windows.Forms.Button()
-        Me.txtNumeroIdentificador = New System.Windows.Forms.TextBox()
         Me.lblNumeroIdentificador = New System.Windows.Forms.Label()
         Me.cmdCancelar = New System.Windows.Forms.Button()
         Me.panelAnimales.SuspendLayout()
@@ -80,6 +86,12 @@ Partial Class frmABMC
         '
         'panelAnimales
         '
+        Me.panelAnimales.Controls.Add(Me.lblKg)
+        Me.panelAnimales.Controls.Add(Me.txtPeso)
+        Me.panelAnimales.Controls.Add(Me.lblPeso)
+        Me.panelAnimales.Controls.Add(Me.rdoHembra)
+        Me.panelAnimales.Controls.Add(Me.rdoMacho)
+        Me.panelAnimales.Controls.Add(Me.lblSexo)
         Me.panelAnimales.Controls.Add(Me.cboLugarActual)
         Me.panelAnimales.Controls.Add(Me.lblLugarActual)
         Me.panelAnimales.Controls.Add(Me.cmdEliminar)
@@ -100,9 +112,71 @@ Partial Class frmABMC
         Me.panelAnimales.Controls.Add(Me.lblNumeroIdentificador)
         Me.panelAnimales.Location = New System.Drawing.Point(12, 45)
         Me.panelAnimales.Name = "panelAnimales"
-        Me.panelAnimales.Size = New System.Drawing.Size(402, 261)
+        Me.panelAnimales.Size = New System.Drawing.Size(402, 282)
         Me.panelAnimales.TabIndex = 3
         Me.panelAnimales.Visible = False
+        '
+        'lblKg
+        '
+        Me.lblKg.AutoSize = True
+        Me.lblKg.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKg.Location = New System.Drawing.Point(115, 228)
+        Me.lblKg.Name = "lblKg"
+        Me.lblKg.Size = New System.Drawing.Size(24, 16)
+        Me.lblKg.TabIndex = 24
+        Me.lblKg.Text = "Kg"
+        '
+        'txtPeso
+        '
+        Me.txtPeso.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPeso.Location = New System.Drawing.Point(51, 224)
+        Me.txtPeso.Name = "txtPeso"
+        Me.txtPeso.Size = New System.Drawing.Size(57, 22)
+        Me.txtPeso.TabIndex = 23
+        '
+        'lblPeso
+        '
+        Me.lblPeso.AutoSize = True
+        Me.lblPeso.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPeso.Location = New System.Drawing.Point(3, 228)
+        Me.lblPeso.Name = "lblPeso"
+        Me.lblPeso.Size = New System.Drawing.Size(42, 16)
+        Me.lblPeso.TabIndex = 22
+        Me.lblPeso.Text = "Peso:"
+        '
+        'rdoHembra
+        '
+        Me.rdoHembra.AutoSize = True
+        Me.rdoHembra.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoHembra.Location = New System.Drawing.Point(185, 141)
+        Me.rdoHembra.Name = "rdoHembra"
+        Me.rdoHembra.Size = New System.Drawing.Size(71, 20)
+        Me.rdoHembra.TabIndex = 21
+        Me.rdoHembra.TabStop = True
+        Me.rdoHembra.Text = "Hembra"
+        Me.rdoHembra.UseVisualStyleBackColor = True
+        '
+        'rdoMacho
+        '
+        Me.rdoMacho.AutoSize = True
+        Me.rdoMacho.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoMacho.Location = New System.Drawing.Point(118, 141)
+        Me.rdoMacho.Name = "rdoMacho"
+        Me.rdoMacho.Size = New System.Drawing.Size(65, 20)
+        Me.rdoMacho.TabIndex = 20
+        Me.rdoMacho.TabStop = True
+        Me.rdoMacho.Text = "Macho"
+        Me.rdoMacho.UseVisualStyleBackColor = True
+        '
+        'lblSexo
+        '
+        Me.lblSexo.AutoSize = True
+        Me.lblSexo.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexo.Location = New System.Drawing.Point(3, 143)
+        Me.lblSexo.Name = "lblSexo"
+        Me.lblSexo.Size = New System.Drawing.Size(105, 16)
+        Me.lblSexo.TabIndex = 19
+        Me.lblSexo.Text = "Sexo del animal:"
         '
         'cboLugarActual
         '
@@ -110,7 +184,7 @@ Partial Class frmABMC
         Me.cboLugarActual.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboLugarActual.FormattingEnabled = True
         Me.cboLugarActual.Items.AddRange(New Object() {"Establecimiento", "Campo de recria"})
-        Me.cboLugarActual.Location = New System.Drawing.Point(155, 178)
+        Me.cboLugarActual.Location = New System.Drawing.Point(152, 197)
         Me.cboLugarActual.Name = "cboLugarActual"
         Me.cboLugarActual.Size = New System.Drawing.Size(154, 24)
         Me.cboLugarActual.TabIndex = 18
@@ -119,7 +193,7 @@ Partial Class frmABMC
         '
         Me.lblLugarActual.AutoSize = True
         Me.lblLugarActual.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLugarActual.Location = New System.Drawing.Point(3, 181)
+        Me.lblLugarActual.Location = New System.Drawing.Point(3, 200)
         Me.lblLugarActual.Name = "lblLugarActual"
         Me.lblLugarActual.Size = New System.Drawing.Size(146, 16)
         Me.lblLugarActual.TabIndex = 17
@@ -128,7 +202,7 @@ Partial Class frmABMC
         'cmdEliminar
         '
         Me.cmdEliminar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdEliminar.Location = New System.Drawing.Point(269, 224)
+        Me.cmdEliminar.Location = New System.Drawing.Point(276, 252)
         Me.cmdEliminar.Name = "cmdEliminar"
         Me.cmdEliminar.Size = New System.Drawing.Size(123, 27)
         Me.cmdEliminar.TabIndex = 16
@@ -138,7 +212,7 @@ Partial Class frmABMC
         'cmdModificar
         '
         Me.cmdModificar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdModificar.Location = New System.Drawing.Point(135, 224)
+        Me.cmdModificar.Location = New System.Drawing.Point(139, 252)
         Me.cmdModificar.Name = "cmdModificar"
         Me.cmdModificar.Size = New System.Drawing.Size(128, 27)
         Me.cmdModificar.TabIndex = 15
@@ -148,12 +222,21 @@ Partial Class frmABMC
         'cmdAgregar
         '
         Me.cmdAgregar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdAgregar.Location = New System.Drawing.Point(6, 224)
+        Me.cmdAgregar.Location = New System.Drawing.Point(6, 252)
         Me.cmdAgregar.Name = "cmdAgregar"
         Me.cmdAgregar.Size = New System.Drawing.Size(123, 27)
         Me.cmdAgregar.TabIndex = 14
         Me.cmdAgregar.Text = "Agregar"
         Me.cmdAgregar.UseVisualStyleBackColor = True
+        '
+        'txtNumeroIdentificador
+        '
+        Me.txtNumeroIdentificador.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumeroIdentificador.Location = New System.Drawing.Point(139, 8)
+        Me.txtNumeroIdentificador.MaxLength = 6
+        Me.txtNumeroIdentificador.Name = "txtNumeroIdentificador"
+        Me.txtNumeroIdentificador.Size = New System.Drawing.Size(58, 25)
+        Me.txtNumeroIdentificador.TabIndex = 2
         '
         'cboTipoAnimal
         '
@@ -161,7 +244,7 @@ Partial Class frmABMC
         Me.cboTipoAnimal.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoAnimal.FormattingEnabled = True
         Me.cboTipoAnimal.Items.AddRange(New Object() {"Vaca", "Toro", "Cria", "Animal no productivo"})
-        Me.cboTipoAnimal.Location = New System.Drawing.Point(105, 145)
+        Me.cboTipoAnimal.Location = New System.Drawing.Point(118, 167)
         Me.cboTipoAnimal.Name = "cboTipoAnimal"
         Me.cboTipoAnimal.Size = New System.Drawing.Size(145, 24)
         Me.cboTipoAnimal.TabIndex = 13
@@ -170,7 +253,7 @@ Partial Class frmABMC
         '
         Me.lblTipo.AutoSize = True
         Me.lblTipo.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTipo.Location = New System.Drawing.Point(3, 148)
+        Me.lblTipo.Location = New System.Drawing.Point(3, 170)
         Me.lblTipo.Name = "lblTipo"
         Me.lblTipo.Size = New System.Drawing.Size(96, 16)
         Me.lblTipo.TabIndex = 12
@@ -268,15 +351,6 @@ Partial Class frmABMC
         Me.cmdVerificar.Text = "Verificar"
         Me.cmdVerificar.UseVisualStyleBackColor = True
         '
-        'txtNumeroIdentificador
-        '
-        Me.txtNumeroIdentificador.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumeroIdentificador.Location = New System.Drawing.Point(139, 8)
-        Me.txtNumeroIdentificador.MaxLength = 6
-        Me.txtNumeroIdentificador.Name = "txtNumeroIdentificador"
-        Me.txtNumeroIdentificador.Size = New System.Drawing.Size(58, 25)
-        Me.txtNumeroIdentificador.TabIndex = 2
-        '
         'lblNumeroIdentificador
         '
         Me.lblNumeroIdentificador.AutoSize = True
@@ -290,7 +364,7 @@ Partial Class frmABMC
         'cmdCancelar
         '
         Me.cmdCancelar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCancelar.Location = New System.Drawing.Point(339, 312)
+        Me.cmdCancelar.Location = New System.Drawing.Point(339, 333)
         Me.cmdCancelar.Name = "cmdCancelar"
         Me.cmdCancelar.Size = New System.Drawing.Size(75, 28)
         Me.cmdCancelar.TabIndex = 4
@@ -303,7 +377,7 @@ Partial Class frmABMC
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ClientSize = New System.Drawing.Size(426, 348)
+        Me.ClientSize = New System.Drawing.Size(426, 364)
         Me.Controls.Add(Me.cmdCancelar)
         Me.Controls.Add(Me.panelAnimales)
         Me.Controls.Add(Me.cmdBuscar)
@@ -344,4 +418,10 @@ Partial Class frmABMC
     Friend WithEvents cmdCancelar As System.Windows.Forms.Button
     Friend WithEvents cboLugarActual As System.Windows.Forms.ComboBox
     Friend WithEvents lblLugarActual As System.Windows.Forms.Label
+    Friend WithEvents lblKg As System.Windows.Forms.Label
+    Friend WithEvents txtPeso As System.Windows.Forms.TextBox
+    Friend WithEvents lblPeso As System.Windows.Forms.Label
+    Friend WithEvents rdoHembra As System.Windows.Forms.RadioButton
+    Friend WithEvents rdoMacho As System.Windows.Forms.RadioButton
+    Friend WithEvents lblSexo As System.Windows.Forms.Label
 End Class

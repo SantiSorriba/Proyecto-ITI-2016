@@ -33,13 +33,13 @@ Partial Class frmLotes
         Me.lblCriterio = New System.Windows.Forms.Label()
         Me.txtNombreLote = New System.Windows.Forms.TextBox()
         Me.lblNombreLote = New System.Windows.Forms.Label()
-        Me.numCantVacas = New System.Windows.Forms.NumericUpDown()
-        Me.lblCantVacas = New System.Windows.Forms.Label()
+        Me.numCantAnimales = New System.Windows.Forms.NumericUpDown()
+        Me.lblCantAnimales = New System.Windows.Forms.Label()
         Me.txtNumLote2 = New System.Windows.Forms.TextBox()
         Me.lblNumLote2 = New System.Windows.Forms.Label()
         Me.cmdVolver = New System.Windows.Forms.Button()
         Me.panelLotes.SuspendLayout()
-        CType(Me.numCantVacas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numCantAnimales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblNroLote
@@ -80,8 +80,8 @@ Partial Class frmLotes
         Me.panelLotes.Controls.Add(Me.lblCriterio)
         Me.panelLotes.Controls.Add(Me.txtNombreLote)
         Me.panelLotes.Controls.Add(Me.lblNombreLote)
-        Me.panelLotes.Controls.Add(Me.numCantVacas)
-        Me.panelLotes.Controls.Add(Me.lblCantVacas)
+        Me.panelLotes.Controls.Add(Me.numCantAnimales)
+        Me.panelLotes.Controls.Add(Me.lblCantAnimales)
         Me.panelLotes.Controls.Add(Me.txtNumLote2)
         Me.panelLotes.Controls.Add(Me.lblNumLote2)
         Me.panelLotes.Location = New System.Drawing.Point(12, 39)
@@ -94,7 +94,7 @@ Partial Class frmLotes
         '
         Me.cmdAgregarAnimales.Enabled = False
         Me.cmdAgregarAnimales.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdAgregarAnimales.Location = New System.Drawing.Point(200, 74)
+        Me.cmdAgregarAnimales.Location = New System.Drawing.Point(219, 74)
         Me.cmdAgregarAnimales.Name = "cmdAgregarAnimales"
         Me.cmdAgregarAnimales.Size = New System.Drawing.Size(75, 26)
         Me.cmdAgregarAnimales.TabIndex = 11
@@ -123,12 +123,13 @@ Partial Class frmLotes
         '
         'cboCriterio
         '
+        Me.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCriterio.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCriterio.FormattingEnabled = True
         Me.cboCriterio.Items.AddRange(New Object() {"Enfermedad", "Ordeñe", "Preñadas", "Secas", "Animales no productivos"})
         Me.cboCriterio.Location = New System.Drawing.Point(73, 105)
         Me.cboCriterio.Name = "cboCriterio"
-        Me.cboCriterio.Size = New System.Drawing.Size(121, 24)
+        Me.cboCriterio.Size = New System.Drawing.Size(211, 24)
         Me.cboCriterio.TabIndex = 8
         '
         'lblCriterio
@@ -159,24 +160,24 @@ Partial Class frmLotes
         Me.lblNombreLote.TabIndex = 5
         Me.lblNombreLote.Text = "Nombre del Lote:"
         '
-        'numCantVacas
+        'numCantAnimales
         '
-        Me.numCantVacas.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numCantVacas.Location = New System.Drawing.Point(127, 77)
-        Me.numCantVacas.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
-        Me.numCantVacas.Name = "numCantVacas"
-        Me.numCantVacas.Size = New System.Drawing.Size(67, 22)
-        Me.numCantVacas.TabIndex = 4
+        Me.numCantAnimales.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.numCantAnimales.Location = New System.Drawing.Point(146, 76)
+        Me.numCantAnimales.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
+        Me.numCantAnimales.Name = "numCantAnimales"
+        Me.numCantAnimales.Size = New System.Drawing.Size(67, 22)
+        Me.numCantAnimales.TabIndex = 4
         '
-        'lblCantVacas
+        'lblCantAnimales
         '
-        Me.lblCantVacas.AutoSize = True
-        Me.lblCantVacas.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantVacas.Location = New System.Drawing.Point(3, 79)
-        Me.lblCantVacas.Name = "lblCantVacas"
-        Me.lblCantVacas.Size = New System.Drawing.Size(118, 16)
-        Me.lblCantVacas.TabIndex = 3
-        Me.lblCantVacas.Text = "Cantidad de vacas:"
+        Me.lblCantAnimales.AutoSize = True
+        Me.lblCantAnimales.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCantAnimales.Location = New System.Drawing.Point(3, 79)
+        Me.lblCantAnimales.Name = "lblCantAnimales"
+        Me.lblCantAnimales.Size = New System.Drawing.Size(137, 16)
+        Me.lblCantAnimales.TabIndex = 3
+        Me.lblCantAnimales.Text = "Cantidad de animales:"
         '
         'txtNumLote2
         '
@@ -227,7 +228,7 @@ Partial Class frmLotes
         Me.Text = "Lotes"
         Me.panelLotes.ResumeLayout(False)
         Me.panelLotes.PerformLayout()
-        CType(Me.numCantVacas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numCantAnimales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -242,8 +243,8 @@ Partial Class frmLotes
     Friend WithEvents lblCriterio As System.Windows.Forms.Label
     Friend WithEvents txtNombreLote As System.Windows.Forms.TextBox
     Friend WithEvents lblNombreLote As System.Windows.Forms.Label
-    Friend WithEvents numCantVacas As System.Windows.Forms.NumericUpDown
-    Friend WithEvents lblCantVacas As System.Windows.Forms.Label
+    Friend WithEvents numCantAnimales As System.Windows.Forms.NumericUpDown
+    Friend WithEvents lblCantAnimales As System.Windows.Forms.Label
     Friend WithEvents txtNumLote2 As System.Windows.Forms.TextBox
     Friend WithEvents lblNumLote2 As System.Windows.Forms.Label
     Friend WithEvents cmdVolver As System.Windows.Forms.Button

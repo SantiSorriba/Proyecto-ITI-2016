@@ -63,4 +63,8 @@
     Private Sub menuConsultarEventos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menuConsultarEventos.Click
         frmConsultarEventos.show()
     End Sub
+
+    Private Sub menuUsuarios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menuUsuarios.Click
+        frmUsuarios.show()
+    End Sub
 End Class

@@ -30,22 +30,23 @@ Partial Class frmCargarEventos
         Me.cboEventos = New System.Windows.Forms.ComboBox()
         Me.groupServicio = New System.Windows.Forms.GroupBox()
         Me.cboServicios = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTipoServicio = New System.Windows.Forms.Label()
         Me.groupMuerte = New System.Windows.Forms.GroupBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboCausa = New System.Windows.Forms.ComboBox()
+        Me.lblCausa = New System.Windows.Forms.Label()
         Me.groupEnfermedad = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboEnfermedad = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.groupMedicacion = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.cmdGuardar = New System.Windows.Forms.Button()
+        Me.cmdCancelar = New System.Windows.Forms.Button()
+        Me.lblSuminstra = New System.Windows.Forms.Label()
+        Me.rdoSi = New System.Windows.Forms.RadioButton()
+        Me.rdoNo = New System.Windows.Forms.RadioButton()
+        Me.lblMedicacion = New System.Windows.Forms.Label()
+        Me.cboMedicacion = New System.Windows.Forms.ComboBox()
         Me.groupServicio.SuspendLayout()
         Me.groupMuerte.SuspendLayout()
         Me.groupEnfermedad.SuspendLayout()
-        Me.groupMedicacion.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblNumAnimal
@@ -101,7 +102,7 @@ Partial Class frmCargarEventos
         Me.cboEventos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEventos.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEventos.FormattingEnabled = True
-        Me.cboEventos.Items.AddRange(New Object() {"Parto", "Vendido", "Servicio", "Enfermedad", "Medicación", "Muerte"})
+        Me.cboEventos.Items.AddRange(New Object() {"Parto", "Vendido", "Servicio", "Enfermedad", "Muerte"})
         Me.cboEventos.Location = New System.Drawing.Point(432, 7)
         Me.cboEventos.Name = "cboEventos"
         Me.cboEventos.Size = New System.Drawing.Size(198, 24)
@@ -110,7 +111,7 @@ Partial Class frmCargarEventos
         'groupServicio
         '
         Me.groupServicio.Controls.Add(Me.cboServicios)
-        Me.groupServicio.Controls.Add(Me.Label1)
+        Me.groupServicio.Controls.Add(Me.lblTipoServicio)
         Me.groupServicio.Enabled = False
         Me.groupServicio.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupServicio.Location = New System.Drawing.Point(15, 33)
@@ -129,67 +130,72 @@ Partial Class frmCargarEventos
         Me.cboServicios.Size = New System.Drawing.Size(180, 24)
         Me.cboServicios.TabIndex = 1
         '
-        'Label1
+        'lblTipoServicio
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tipo de servicio:"
+        Me.lblTipoServicio.AutoSize = True
+        Me.lblTipoServicio.Location = New System.Drawing.Point(6, 27)
+        Me.lblTipoServicio.Name = "lblTipoServicio"
+        Me.lblTipoServicio.Size = New System.Drawing.Size(101, 16)
+        Me.lblTipoServicio.TabIndex = 0
+        Me.lblTipoServicio.Text = "Tipo de servicio:"
         '
         'groupMuerte
         '
-        Me.groupMuerte.Controls.Add(Me.ComboBox3)
-        Me.groupMuerte.Controls.Add(Me.Label4)
+        Me.groupMuerte.Controls.Add(Me.cboCausa)
+        Me.groupMuerte.Controls.Add(Me.lblCausa)
         Me.groupMuerte.Enabled = False
         Me.groupMuerte.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupMuerte.Location = New System.Drawing.Point(341, 96)
+        Me.groupMuerte.Location = New System.Drawing.Point(15, 96)
         Me.groupMuerte.Name = "groupMuerte"
-        Me.groupMuerte.Size = New System.Drawing.Size(251, 61)
+        Me.groupMuerte.Size = New System.Drawing.Size(299, 61)
         Me.groupMuerte.TabIndex = 9
         Me.groupMuerte.TabStop = False
         Me.groupMuerte.Text = "MUERTE"
         '
-        'ComboBox3
+        'cboCausa
         '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(61, 27)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(184, 24)
-        Me.ComboBox3.TabIndex = 1
+        Me.cboCausa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCausa.FormattingEnabled = True
+        Me.cboCausa.Location = New System.Drawing.Point(61, 27)
+        Me.cboCausa.Name = "cboCausa"
+        Me.cboCausa.Size = New System.Drawing.Size(232, 24)
+        Me.cboCausa.TabIndex = 1
         '
-        'Label4
+        'lblCausa
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 30)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 16)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Causa:"
+        Me.lblCausa.AutoSize = True
+        Me.lblCausa.Location = New System.Drawing.Point(6, 30)
+        Me.lblCausa.Name = "lblCausa"
+        Me.lblCausa.Size = New System.Drawing.Size(49, 16)
+        Me.lblCausa.TabIndex = 0
+        Me.lblCausa.Text = "Causa:"
         '
         'groupEnfermedad
         '
-        Me.groupEnfermedad.Controls.Add(Me.ComboBox1)
+        Me.groupEnfermedad.Controls.Add(Me.cboMedicacion)
+        Me.groupEnfermedad.Controls.Add(Me.lblMedicacion)
+        Me.groupEnfermedad.Controls.Add(Me.rdoNo)
+        Me.groupEnfermedad.Controls.Add(Me.rdoSi)
+        Me.groupEnfermedad.Controls.Add(Me.lblSuminstra)
+        Me.groupEnfermedad.Controls.Add(Me.cboEnfermedad)
         Me.groupEnfermedad.Controls.Add(Me.Label2)
         Me.groupEnfermedad.Enabled = False
         Me.groupEnfermedad.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupEnfermedad.Location = New System.Drawing.Point(320, 35)
         Me.groupEnfermedad.Name = "groupEnfermedad"
-        Me.groupEnfermedad.Size = New System.Drawing.Size(368, 55)
+        Me.groupEnfermedad.Size = New System.Drawing.Size(368, 104)
         Me.groupEnfermedad.TabIndex = 10
         Me.groupEnfermedad.TabStop = False
         Me.groupEnfermedad.Text = "ENFERMEDAD"
         '
-        'ComboBox1
+        'cboEnfermedad
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(137, 22)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(213, 24)
-        Me.ComboBox1.TabIndex = 1
+        Me.cboEnfermedad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboEnfermedad.FormattingEnabled = True
+        Me.cboEnfermedad.Location = New System.Drawing.Point(137, 22)
+        Me.cboEnfermedad.Name = "cboEnfermedad"
+        Me.cboEnfermedad.Size = New System.Drawing.Size(213, 24)
+        Me.cboEnfermedad.TabIndex = 1
         '
         'Label2
         '
@@ -200,54 +206,74 @@ Partial Class frmCargarEventos
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tipo de enfermedad:"
         '
-        'groupMedicacion
+        'cmdGuardar
         '
-        Me.groupMedicacion.Controls.Add(Me.ComboBox2)
-        Me.groupMedicacion.Controls.Add(Me.Label3)
-        Me.groupMedicacion.Enabled = False
-        Me.groupMedicacion.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupMedicacion.Location = New System.Drawing.Point(15, 96)
-        Me.groupMedicacion.Name = "groupMedicacion"
-        Me.groupMedicacion.Size = New System.Drawing.Size(320, 61)
-        Me.groupMedicacion.TabIndex = 11
-        Me.groupMedicacion.TabStop = False
-        Me.groupMedicacion.Text = "MEDICACIÓN"
+        Me.cmdGuardar.Location = New System.Drawing.Point(502, 145)
+        Me.cmdGuardar.Name = "cmdGuardar"
+        Me.cmdGuardar.Size = New System.Drawing.Size(90, 23)
+        Me.cmdGuardar.TabIndex = 12
+        Me.cmdGuardar.Text = "Guardar"
+        Me.cmdGuardar.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'cmdCancelar
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(136, 27)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox2.TabIndex = 2
+        Me.cmdCancelar.Location = New System.Drawing.Point(598, 145)
+        Me.cmdCancelar.Name = "cmdCancelar"
+        Me.cmdCancelar.Size = New System.Drawing.Size(90, 23)
+        Me.cmdCancelar.TabIndex = 13
+        Me.cmdCancelar.Text = "Cancelar"
+        Me.cmdCancelar.UseVisualStyleBackColor = True
         '
-        'Label3
+        'lblSuminstra
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 30)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 16)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Tipo de medicación:"
+        Me.lblSuminstra.AutoSize = True
+        Me.lblSuminstra.Location = New System.Drawing.Point(4, 53)
+        Me.lblSuminstra.Name = "lblSuminstra"
+        Me.lblSuminstra.Size = New System.Drawing.Size(195, 16)
+        Me.lblSuminstra.TabIndex = 2
+        Me.lblSuminstra.Text = "¿Se le suministra medicación? :"
         '
-        'Button1
+        'rdoSi
         '
-        Me.Button1.Location = New System.Drawing.Point(598, 105)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.rdoSi.AutoSize = True
+        Me.rdoSi.Location = New System.Drawing.Point(207, 52)
+        Me.rdoSi.Name = "rdoSi"
+        Me.rdoSi.Size = New System.Drawing.Size(38, 20)
+        Me.rdoSi.TabIndex = 3
+        Me.rdoSi.TabStop = True
+        Me.rdoSi.Text = "Si"
+        Me.rdoSi.UseVisualStyleBackColor = True
         '
-        'Button2
+        'rdoNo
         '
-        Me.Button2.Location = New System.Drawing.Point(598, 134)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.rdoNo.AutoSize = True
+        Me.rdoNo.Location = New System.Drawing.Point(251, 52)
+        Me.rdoNo.Name = "rdoNo"
+        Me.rdoNo.Size = New System.Drawing.Size(42, 20)
+        Me.rdoNo.TabIndex = 4
+        Me.rdoNo.TabStop = True
+        Me.rdoNo.Text = "No"
+        Me.rdoNo.UseVisualStyleBackColor = True
+        '
+        'lblMedicacion
+        '
+        Me.lblMedicacion.AutoSize = True
+        Me.lblMedicacion.Location = New System.Drawing.Point(9, 79)
+        Me.lblMedicacion.Name = "lblMedicacion"
+        Me.lblMedicacion.Size = New System.Drawing.Size(78, 16)
+        Me.lblMedicacion.TabIndex = 5
+        Me.lblMedicacion.Text = "Medicación:"
+        '
+        'cboMedicacion
+        '
+        Me.cboMedicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMedicacion.Enabled = False
+        Me.cboMedicacion.FormattingEnabled = True
+        Me.cboMedicacion.Items.AddRange(New Object() {"1", "2"})
+        Me.cboMedicacion.Location = New System.Drawing.Point(93, 74)
+        Me.cboMedicacion.Name = "cboMedicacion"
+        Me.cboMedicacion.Size = New System.Drawing.Size(217, 24)
+        Me.cboMedicacion.TabIndex = 6
         '
         'frmCargarEventos
         '
@@ -255,10 +281,9 @@ Partial Class frmCargarEventos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ClientSize = New System.Drawing.Size(703, 169)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.groupMedicacion)
+        Me.ClientSize = New System.Drawing.Size(703, 175)
+        Me.Controls.Add(Me.cmdCancelar)
+        Me.Controls.Add(Me.cmdGuardar)
         Me.Controls.Add(Me.groupEnfermedad)
         Me.Controls.Add(Me.groupMuerte)
         Me.Controls.Add(Me.groupServicio)
@@ -278,8 +303,6 @@ Partial Class frmCargarEventos
         Me.groupMuerte.PerformLayout()
         Me.groupEnfermedad.ResumeLayout(False)
         Me.groupEnfermedad.PerformLayout()
-        Me.groupMedicacion.ResumeLayout(False)
-        Me.groupMedicacion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -293,15 +316,17 @@ Partial Class frmCargarEventos
     Friend WithEvents groupServicio As System.Windows.Forms.GroupBox
     Friend WithEvents groupMuerte As System.Windows.Forms.GroupBox
     Friend WithEvents groupEnfermedad As System.Windows.Forms.GroupBox
-    Friend WithEvents groupMedicacion As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents cmdGuardar As System.Windows.Forms.Button
+    Friend WithEvents cmdCancelar As System.Windows.Forms.Button
     Friend WithEvents cboServicios As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents lblTipoServicio As System.Windows.Forms.Label
+    Friend WithEvents cboCausa As System.Windows.Forms.ComboBox
+    Friend WithEvents lblCausa As System.Windows.Forms.Label
+    Friend WithEvents cboEnfermedad As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents rdoNo As System.Windows.Forms.RadioButton
+    Friend WithEvents rdoSi As System.Windows.Forms.RadioButton
+    Friend WithEvents lblSuminstra As System.Windows.Forms.Label
+    Friend WithEvents cboMedicacion As System.Windows.Forms.ComboBox
+    Friend WithEvents lblMedicacion As System.Windows.Forms.Label
 End Class

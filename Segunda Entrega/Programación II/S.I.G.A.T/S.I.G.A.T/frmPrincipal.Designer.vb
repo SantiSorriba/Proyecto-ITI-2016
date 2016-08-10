@@ -37,15 +37,16 @@ Partial Class frmPrincipal
         Me.menuInventario = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuLotes = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuOrdenies = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuConsultarEventos = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuEventos = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuCargarEvento = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuConsultarEventos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
         'menuPrincipal
         '
-        Me.menuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuArchivo, Me.menuEstablecimientos, Me.menuAnimales, Me.menuEventos})
+        Me.menuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuArchivo, Me.menuEstablecimientos, Me.menuAnimales, Me.menuEventos, Me.menuUsuarios})
         Me.menuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.menuPrincipal.Name = "menuPrincipal"
         Me.menuPrincipal.Size = New System.Drawing.Size(1284, 24)
@@ -139,6 +140,12 @@ Partial Class frmPrincipal
         Me.menuOrdenies.Size = New System.Drawing.Size(169, 22)
         Me.menuOrdenies.Text = "Ordeñes"
         '
+        'menuConsultarEventos
+        '
+        Me.menuConsultarEventos.Name = "menuConsultarEventos"
+        Me.menuConsultarEventos.Size = New System.Drawing.Size(169, 22)
+        Me.menuConsultarEventos.Text = "Consultar Eventos"
+        '
         'menuEventos
         '
         Me.menuEventos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCargarEvento})
@@ -152,11 +159,11 @@ Partial Class frmPrincipal
         Me.menuCargarEvento.Size = New System.Drawing.Size(152, 22)
         Me.menuCargarEvento.Text = "Cargar evento"
         '
-        'menuConsultarEventos
+        'menuUsuarios
         '
-        Me.menuConsultarEventos.Name = "menuConsultarEventos"
-        Me.menuConsultarEventos.Size = New System.Drawing.Size(169, 22)
-        Me.menuConsultarEventos.Text = "Consultar Eventos"
+        Me.menuUsuarios.Name = "menuUsuarios"
+        Me.menuUsuarios.Size = New System.Drawing.Size(64, 20)
+        Me.menuUsuarios.Text = "Usuarios"
         '
         'frmPrincipal
         '
@@ -196,5 +203,6 @@ Partial Class frmPrincipal
     Friend WithEvents menuEventos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuCargarEvento As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuConsultarEventos As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents menuUsuarios As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -30,8 +30,10 @@ Partial Class frmEstablecimientos
         Me.cmdModificar = New System.Windows.Forms.Button()
         Me.cmdAgregar = New System.Windows.Forms.Button()
         Me.groupPropietario = New System.Windows.Forms.GroupBox()
-        Me.txtTelPropietario = New System.Windows.Forms.TextBox()
+        Me.cboTelPropietario = New System.Windows.Forms.ComboBox()
         Me.lblTelPropietario = New System.Windows.Forms.Label()
+        Me.cmdBorrartel2 = New System.Windows.Forms.Button()
+        Me.cmdAgregartel2 = New System.Windows.Forms.Button()
         Me.txtDirPropietario = New System.Windows.Forms.TextBox()
         Me.lblDirPropietario = New System.Windows.Forms.Label()
         Me.cboDptoPropietario = New System.Windows.Forms.ComboBox()
@@ -43,16 +45,18 @@ Partial Class frmEstablecimientos
         Me.txtNomPropietario = New System.Windows.Forms.TextBox()
         Me.lblNomPropietario = New System.Windows.Forms.Label()
         Me.groupEstablecimiento = New System.Windows.Forms.GroupBox()
+        Me.cmdBorrartel1 = New System.Windows.Forms.Button()
+        Me.cmdAgregartel1 = New System.Windows.Forms.Button()
+        Me.cboTelEstablecimiento = New System.Windows.Forms.ComboBox()
         Me.txtLimiteAnimales = New System.Windows.Forms.TextBox()
         Me.lblLimiteAnimales = New System.Windows.Forms.Label()
         Me.txtNroRut = New System.Windows.Forms.TextBox()
+        Me.lblTelEstablecimiento = New System.Windows.Forms.Label()
         Me.lblNroRut = New System.Windows.Forms.Label()
         Me.lblNroBps = New System.Windows.Forms.Label()
         Me.txtNroBps = New System.Windows.Forms.TextBox()
         Me.txtNroDicose = New System.Windows.Forms.TextBox()
         Me.lblNroDicose = New System.Windows.Forms.Label()
-        Me.txtTelTambo = New System.Windows.Forms.TextBox()
-        Me.lblTelefono = New System.Windows.Forms.Label()
         Me.txtDirTambo = New System.Windows.Forms.TextBox()
         Me.lblDireccion = New System.Windows.Forms.Label()
         Me.lblHectareas = New System.Windows.Forms.Label()
@@ -80,7 +84,6 @@ Partial Class frmEstablecimientos
         '
         'cboEstablecimiento
         '
-        Me.cboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEstablecimiento.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEstablecimiento.FormattingEnabled = True
         Me.cboEstablecimiento.Items.AddRange(New Object() {"Establecimiento Las Perdices", "Establecimiento Tala", "Establecimiento Los Juncales"})
@@ -110,13 +113,13 @@ Partial Class frmEstablecimientos
         Me.panelEstablecimientos.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panelEstablecimientos.Location = New System.Drawing.Point(12, 38)
         Me.panelEstablecimientos.Name = "panelEstablecimientos"
-        Me.panelEstablecimientos.Size = New System.Drawing.Size(488, 335)
+        Me.panelEstablecimientos.Size = New System.Drawing.Size(506, 373)
         Me.panelEstablecimientos.TabIndex = 3
         Me.panelEstablecimientos.Visible = False
         '
         'cmdParametros
         '
-        Me.cmdParametros.Location = New System.Drawing.Point(340, 302)
+        Me.cmdParametros.Location = New System.Drawing.Point(340, 340)
         Me.cmdParametros.Name = "cmdParametros"
         Me.cmdParametros.Size = New System.Drawing.Size(140, 30)
         Me.cmdParametros.TabIndex = 4
@@ -125,7 +128,7 @@ Partial Class frmEstablecimientos
         '
         'cmdModificar
         '
-        Me.cmdModificar.Location = New System.Drawing.Point(170, 302)
+        Me.cmdModificar.Location = New System.Drawing.Point(170, 340)
         Me.cmdModificar.Name = "cmdModificar"
         Me.cmdModificar.Size = New System.Drawing.Size(164, 30)
         Me.cmdModificar.TabIndex = 3
@@ -134,7 +137,7 @@ Partial Class frmEstablecimientos
         '
         'cmdAgregar
         '
-        Me.cmdAgregar.Location = New System.Drawing.Point(3, 302)
+        Me.cmdAgregar.Location = New System.Drawing.Point(3, 340)
         Me.cmdAgregar.Name = "cmdAgregar"
         Me.cmdAgregar.Size = New System.Drawing.Size(161, 30)
         Me.cmdAgregar.TabIndex = 2
@@ -143,8 +146,10 @@ Partial Class frmEstablecimientos
         '
         'groupPropietario
         '
-        Me.groupPropietario.Controls.Add(Me.txtTelPropietario)
+        Me.groupPropietario.Controls.Add(Me.cboTelPropietario)
         Me.groupPropietario.Controls.Add(Me.lblTelPropietario)
+        Me.groupPropietario.Controls.Add(Me.cmdBorrartel2)
+        Me.groupPropietario.Controls.Add(Me.cmdAgregartel2)
         Me.groupPropietario.Controls.Add(Me.txtDirPropietario)
         Me.groupPropietario.Controls.Add(Me.lblDirPropietario)
         Me.groupPropietario.Controls.Add(Me.cboDptoPropietario)
@@ -155,30 +160,52 @@ Partial Class frmEstablecimientos
         Me.groupPropietario.Controls.Add(Me.lblApellido)
         Me.groupPropietario.Controls.Add(Me.txtNomPropietario)
         Me.groupPropietario.Controls.Add(Me.lblNomPropietario)
-        Me.groupPropietario.Location = New System.Drawing.Point(3, 176)
+        Me.groupPropietario.Location = New System.Drawing.Point(3, 187)
         Me.groupPropietario.Name = "groupPropietario"
-        Me.groupPropietario.Size = New System.Drawing.Size(477, 120)
+        Me.groupPropietario.Size = New System.Drawing.Size(480, 147)
         Me.groupPropietario.TabIndex = 1
         Me.groupPropietario.TabStop = False
         Me.groupPropietario.Text = "Propietario"
         '
-        'txtTelPropietario
+        'cboTelPropietario
         '
-        Me.txtTelPropietario.Location = New System.Drawing.Point(340, 86)
-        Me.txtTelPropietario.MaxLength = 5
-        Me.txtTelPropietario.Multiline = True
-        Me.txtTelPropietario.Name = "txtTelPropietario"
-        Me.txtTelPropietario.Size = New System.Drawing.Size(79, 20)
-        Me.txtTelPropietario.TabIndex = 12
+        Me.cboTelPropietario.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboTelPropietario.FormattingEnabled = True
+        Me.cboTelPropietario.Items.AddRange(New Object() {"323213", "312321412", "453534"})
+        Me.cboTelPropietario.Location = New System.Drawing.Point(78, 112)
+        Me.cboTelPropietario.MaxDropDownItems = 10
+        Me.cboTelPropietario.Name = "cboTelPropietario"
+        Me.cboTelPropietario.Size = New System.Drawing.Size(92, 23)
+        Me.cboTelPropietario.TabIndex = 17
         '
         'lblTelPropietario
         '
         Me.lblTelPropietario.AutoSize = True
-        Me.lblTelPropietario.Location = New System.Drawing.Point(275, 88)
+        Me.lblTelPropietario.Location = New System.Drawing.Point(6, 117)
         Me.lblTelPropietario.Name = "lblTelPropietario"
-        Me.lblTelPropietario.Size = New System.Drawing.Size(59, 16)
-        Me.lblTelPropietario.TabIndex = 11
-        Me.lblTelPropietario.Text = "Teléfono:"
+        Me.lblTelPropietario.Size = New System.Drawing.Size(66, 16)
+        Me.lblTelPropietario.TabIndex = 16
+        Me.lblTelPropietario.Text = "Teléfonos:"
+        '
+        'cmdBorrartel2
+        '
+        Me.cmdBorrartel2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBorrartel2.Location = New System.Drawing.Point(290, 111)
+        Me.cmdBorrartel2.Name = "cmdBorrartel2"
+        Me.cmdBorrartel2.Size = New System.Drawing.Size(97, 29)
+        Me.cmdBorrartel2.TabIndex = 14
+        Me.cmdBorrartel2.Text = "Borrar telefono"
+        Me.cmdBorrartel2.UseVisualStyleBackColor = True
+        '
+        'cmdAgregartel2
+        '
+        Me.cmdAgregartel2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdAgregartel2.Location = New System.Drawing.Point(176, 111)
+        Me.cmdAgregartel2.Name = "cmdAgregartel2"
+        Me.cmdAgregartel2.Size = New System.Drawing.Size(108, 29)
+        Me.cmdAgregartel2.TabIndex = 13
+        Me.cmdAgregartel2.Text = "Agregar telefono"
+        Me.cmdAgregartel2.UseVisualStyleBackColor = True
         '
         'txtDirPropietario
         '
@@ -186,7 +213,7 @@ Partial Class frmEstablecimientos
         Me.txtDirPropietario.MaxLength = 25
         Me.txtDirPropietario.Multiline = True
         Me.txtDirPropietario.Name = "txtDirPropietario"
-        Me.txtDirPropietario.Size = New System.Drawing.Size(189, 20)
+        Me.txtDirPropietario.Size = New System.Drawing.Size(224, 20)
         Me.txtDirPropietario.TabIndex = 10
         '
         'lblDirPropietario
@@ -274,16 +301,18 @@ Partial Class frmEstablecimientos
         '
         'groupEstablecimiento
         '
+        Me.groupEstablecimiento.Controls.Add(Me.cmdBorrartel1)
+        Me.groupEstablecimiento.Controls.Add(Me.cmdAgregartel1)
+        Me.groupEstablecimiento.Controls.Add(Me.cboTelEstablecimiento)
         Me.groupEstablecimiento.Controls.Add(Me.txtLimiteAnimales)
         Me.groupEstablecimiento.Controls.Add(Me.lblLimiteAnimales)
         Me.groupEstablecimiento.Controls.Add(Me.txtNroRut)
+        Me.groupEstablecimiento.Controls.Add(Me.lblTelEstablecimiento)
         Me.groupEstablecimiento.Controls.Add(Me.lblNroRut)
         Me.groupEstablecimiento.Controls.Add(Me.lblNroBps)
         Me.groupEstablecimiento.Controls.Add(Me.txtNroBps)
         Me.groupEstablecimiento.Controls.Add(Me.txtNroDicose)
         Me.groupEstablecimiento.Controls.Add(Me.lblNroDicose)
-        Me.groupEstablecimiento.Controls.Add(Me.txtTelTambo)
-        Me.groupEstablecimiento.Controls.Add(Me.lblTelefono)
         Me.groupEstablecimiento.Controls.Add(Me.txtDirTambo)
         Me.groupEstablecimiento.Controls.Add(Me.lblDireccion)
         Me.groupEstablecimiento.Controls.Add(Me.lblHectareas)
@@ -295,23 +324,54 @@ Partial Class frmEstablecimientos
         Me.groupEstablecimiento.Controls.Add(Me.lblNombre)
         Me.groupEstablecimiento.Location = New System.Drawing.Point(3, 3)
         Me.groupEstablecimiento.Name = "groupEstablecimiento"
-        Me.groupEstablecimiento.Size = New System.Drawing.Size(477, 167)
+        Me.groupEstablecimiento.Size = New System.Drawing.Size(485, 165)
         Me.groupEstablecimiento.TabIndex = 0
         Me.groupEstablecimiento.TabStop = False
         Me.groupEstablecimiento.Text = "Establecimiento"
         '
+        'cmdBorrartel1
+        '
+        Me.cmdBorrartel1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBorrartel1.Location = New System.Drawing.Point(422, 135)
+        Me.cmdBorrartel1.Name = "cmdBorrartel1"
+        Me.cmdBorrartel1.Size = New System.Drawing.Size(57, 25)
+        Me.cmdBorrartel1.TabIndex = 19
+        Me.cmdBorrartel1.Text = "Borrar"
+        Me.cmdBorrartel1.UseVisualStyleBackColor = True
+        '
+        'cmdAgregartel1
+        '
+        Me.cmdAgregartel1.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdAgregartel1.Location = New System.Drawing.Point(355, 135)
+        Me.cmdAgregartel1.Name = "cmdAgregartel1"
+        Me.cmdAgregartel1.Size = New System.Drawing.Size(64, 25)
+        Me.cmdAgregartel1.TabIndex = 15
+        Me.cmdAgregartel1.Text = "Agregar"
+        Me.cmdAgregartel1.UseVisualStyleBackColor = True
+        '
+        'cboTelEstablecimiento
+        '
+        Me.cboTelEstablecimiento.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboTelEstablecimiento.FormattingEnabled = True
+        Me.cboTelEstablecimiento.Items.AddRange(New Object() {"5435", "53463", "666"})
+        Me.cboTelEstablecimiento.Location = New System.Drawing.Point(257, 137)
+        Me.cboTelEstablecimiento.MaxDropDownItems = 10
+        Me.cboTelEstablecimiento.Name = "cboTelEstablecimiento"
+        Me.cboTelEstablecimiento.Size = New System.Drawing.Size(92, 23)
+        Me.cboTelEstablecimiento.TabIndex = 15
+        '
         'txtLimiteAnimales
         '
-        Me.txtLimiteAnimales.Location = New System.Drawing.Point(359, 136)
+        Me.txtLimiteAnimales.Location = New System.Drawing.Point(130, 139)
         Me.txtLimiteAnimales.MaxLength = 5
         Me.txtLimiteAnimales.Name = "txtLimiteAnimales"
-        Me.txtLimiteAnimales.Size = New System.Drawing.Size(78, 22)
+        Me.txtLimiteAnimales.Size = New System.Drawing.Size(49, 22)
         Me.txtLimiteAnimales.TabIndex = 18
         '
         'lblLimiteAnimales
         '
         Me.lblLimiteAnimales.AutoSize = True
-        Me.lblLimiteAnimales.Location = New System.Drawing.Point(232, 139)
+        Me.lblLimiteAnimales.Location = New System.Drawing.Point(6, 142)
         Me.lblLimiteAnimales.Name = "lblLimiteAnimales"
         Me.lblLimiteAnimales.Size = New System.Drawing.Size(121, 16)
         Me.lblLimiteAnimales.TabIndex = 17
@@ -319,17 +379,26 @@ Partial Class frmEstablecimientos
         '
         'txtNroRut
         '
-        Me.txtNroRut.Location = New System.Drawing.Point(124, 137)
+        Me.txtNroRut.Location = New System.Drawing.Point(337, 110)
         Me.txtNroRut.MaxLength = 12
         Me.txtNroRut.Multiline = True
         Me.txtNroRut.Name = "txtNroRut"
         Me.txtNroRut.Size = New System.Drawing.Size(99, 20)
         Me.txtNroRut.TabIndex = 16
         '
+        'lblTelEstablecimiento
+        '
+        Me.lblTelEstablecimiento.AutoSize = True
+        Me.lblTelEstablecimiento.Location = New System.Drawing.Point(185, 142)
+        Me.lblTelEstablecimiento.Name = "lblTelEstablecimiento"
+        Me.lblTelEstablecimiento.Size = New System.Drawing.Size(66, 16)
+        Me.lblTelEstablecimiento.TabIndex = 11
+        Me.lblTelEstablecimiento.Text = "Teléfonos:"
+        '
         'lblNroRut
         '
         Me.lblNroRut.AutoSize = True
-        Me.lblNroRut.Location = New System.Drawing.Point(6, 139)
+        Me.lblNroRut.Location = New System.Drawing.Point(228, 114)
         Me.lblNroRut.Name = "lblNroRut"
         Me.lblNroRut.Size = New System.Drawing.Size(103, 16)
         Me.lblNroRut.TabIndex = 15
@@ -338,7 +407,7 @@ Partial Class frmEstablecimientos
         'lblNroBps
         '
         Me.lblNroBps.AutoSize = True
-        Me.lblNroBps.Location = New System.Drawing.Point(232, 114)
+        Me.lblNroBps.Location = New System.Drawing.Point(275, 87)
         Me.lblNroBps.Name = "lblNroBps"
         Me.lblNroBps.Size = New System.Drawing.Size(106, 16)
         Me.lblNroBps.TabIndex = 14
@@ -346,7 +415,7 @@ Partial Class frmEstablecimientos
         '
         'txtNroBps
         '
-        Me.txtNroBps.Location = New System.Drawing.Point(344, 110)
+        Me.txtNroBps.Location = New System.Drawing.Point(387, 84)
         Me.txtNroBps.MaxLength = 10
         Me.txtNroBps.Multiline = True
         Me.txtNroBps.Name = "txtNroBps"
@@ -370,24 +439,6 @@ Partial Class frmEstablecimientos
         Me.lblNroDicose.Size = New System.Drawing.Size(128, 16)
         Me.lblNroDicose.TabIndex = 11
         Me.lblNroDicose.Text = "Número de DICOSE:"
-        '
-        'txtTelTambo
-        '
-        Me.txtTelTambo.Location = New System.Drawing.Point(340, 84)
-        Me.txtTelTambo.MaxLength = 5
-        Me.txtTelTambo.Multiline = True
-        Me.txtTelTambo.Name = "txtTelTambo"
-        Me.txtTelTambo.Size = New System.Drawing.Size(79, 20)
-        Me.txtTelTambo.TabIndex = 10
-        '
-        'lblTelefono
-        '
-        Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Location = New System.Drawing.Point(275, 87)
-        Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(59, 16)
-        Me.lblTelefono.TabIndex = 9
-        Me.lblTelefono.Text = "Teléfono:"
         '
         'txtDirTambo
         '
@@ -475,7 +526,7 @@ Partial Class frmEstablecimientos
         '
         'cmdCancelar
         '
-        Me.cmdCancelar.Location = New System.Drawing.Point(398, 379)
+        Me.cmdCancelar.Location = New System.Drawing.Point(398, 417)
         Me.cmdCancelar.Name = "cmdCancelar"
         Me.cmdCancelar.Size = New System.Drawing.Size(102, 23)
         Me.cmdCancelar.TabIndex = 4
@@ -488,7 +539,7 @@ Partial Class frmEstablecimientos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ClientSize = New System.Drawing.Size(508, 407)
+        Me.ClientSize = New System.Drawing.Size(530, 452)
         Me.Controls.Add(Me.cmdCancelar)
         Me.Controls.Add(Me.panelEstablecimientos)
         Me.Controls.Add(Me.cmdBuscar)
@@ -520,8 +571,7 @@ Partial Class frmEstablecimientos
     Friend WithEvents cmdModificar As System.Windows.Forms.Button
     Friend WithEvents cmdAgregar As System.Windows.Forms.Button
     Friend WithEvents groupPropietario As System.Windows.Forms.GroupBox
-    Friend WithEvents txtTelPropietario As System.Windows.Forms.TextBox
-    Friend WithEvents lblTelPropietario As System.Windows.Forms.Label
+    Friend WithEvents lblTelEstablecimiento As System.Windows.Forms.Label
     Friend WithEvents txtDirPropietario As System.Windows.Forms.TextBox
     Friend WithEvents lblDirPropietario As System.Windows.Forms.Label
     Friend WithEvents cboDptoPropietario As System.Windows.Forms.ComboBox
@@ -538,8 +588,6 @@ Partial Class frmEstablecimientos
     Friend WithEvents txtNroBps As System.Windows.Forms.TextBox
     Friend WithEvents txtNroDicose As System.Windows.Forms.TextBox
     Friend WithEvents lblNroDicose As System.Windows.Forms.Label
-    Friend WithEvents txtTelTambo As System.Windows.Forms.TextBox
-    Friend WithEvents lblTelefono As System.Windows.Forms.Label
     Friend WithEvents txtDirTambo As System.Windows.Forms.TextBox
     Friend WithEvents lblDireccion As System.Windows.Forms.Label
     Friend WithEvents lblHectareas As System.Windows.Forms.Label
@@ -548,4 +596,11 @@ Partial Class frmEstablecimientos
     Friend WithEvents cmdCancelar As System.Windows.Forms.Button
     Friend WithEvents txtLimiteAnimales As System.Windows.Forms.TextBox
     Friend WithEvents lblLimiteAnimales As System.Windows.Forms.Label
+    Friend WithEvents cboTelPropietario As System.Windows.Forms.ComboBox
+    Friend WithEvents lblTelPropietario As System.Windows.Forms.Label
+    Friend WithEvents cmdBorrartel2 As System.Windows.Forms.Button
+    Friend WithEvents cmdAgregartel2 As System.Windows.Forms.Button
+    Friend WithEvents cmdBorrartel1 As System.Windows.Forms.Button
+    Friend WithEvents cmdAgregartel1 As System.Windows.Forms.Button
+    Friend WithEvents cboTelEstablecimiento As System.Windows.Forms.ComboBox
 End Class

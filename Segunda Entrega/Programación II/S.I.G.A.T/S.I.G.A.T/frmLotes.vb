@@ -30,8 +30,8 @@
         End If
     End Sub
 
-    Private Sub numCantVacas_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles numCantVacas.ValueChanged
-        If numCantVacas.Value > 0 Then
+    Private Sub numCantVacas_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles numCantAnimales.ValueChanged
+        If numCantAnimales.Value > 0 Then
             cmdAgregarAnimales.Enabled = True
         Else
             cmdAgregarAnimales.Enabled = False

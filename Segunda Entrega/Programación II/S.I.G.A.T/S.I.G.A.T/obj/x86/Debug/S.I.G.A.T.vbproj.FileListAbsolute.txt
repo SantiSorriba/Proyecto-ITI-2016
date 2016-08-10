@@ -18,3 +18,4 @@ C:\Users\Santiago\Desktop\Programacion 2da entrega\S.I.G.A.T\S.I.G.A.T\obj\x86\D
 C:\Users\Santiago\Desktop\Programacion 2da entrega\S.I.G.A.T\S.I.G.A.T\obj\x86\Debug\S.I.G.A.T.frmCampoRecria.resources
 C:\Users\Santiago\Desktop\Programacion 2da entrega\S.I.G.A.T\S.I.G.A.T\obj\x86\Debug\S.I.G.A.T.frmCargarEventos.resources
 C:\Users\Santiago\Desktop\Programacion 2da entrega\S.I.G.A.T\S.I.G.A.T\obj\x86\Debug\S.I.G.A.T.frmConsultarEventos.resources
+C:\Users\Santiago\Desktop\Programacion 2da entrega\S.I.G.A.T\S.I.G.A.T\obj\x86\Debug\S.I.G.A.T.frmUsuarios.resources

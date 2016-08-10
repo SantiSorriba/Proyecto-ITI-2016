@@ -5,11 +5,15 @@
     End Sub
 
     Private Sub cmdBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBuscar.Click
-        If cboEstablecimiento.SelectedIndex.Equals(-1) Then
+        If cboEstablecimiento.Text.Equals("") Then
             If MsgBox("No selecciono ningun establecimiento. ¿Desea ingresar uno nuevo?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 panelEstablecimientos.Visible = True
                 cmdModificar.Enabled = False
                 cmdBuscar.Enabled = False
+                cboTelEstablecimiento.Items.Clear()
+                cboTelPropietario.Items.Clear()
+                cboTelEstablecimiento.Text = ""
+                cboTelPropietario.Text = ""
             Else
                 MsgBox("Seleccione un establecimiento de la lista.")
             End If
@@ -22,5 +26,6 @@
     Private Sub cmdCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCancelar.Click
         Me.Close()
     End Sub
+
 
 End Class
