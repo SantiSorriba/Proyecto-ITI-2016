@@ -2,23 +2,29 @@
 
     Private Sub frmEstablecimientos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.MdiParent = frmPrincipal
+        MsgBox("Los teléfonos se modifican independientemente de los demás datos.")
+        'Cargar los establecimientos en el combo box
+        Busquedas.cargarestablecimientos(cbo_Establecimientos)
     End Sub
 
     Private Sub cmd_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Buscar.Click
-        If cbo_Establecimientos.Text.Equals("") Then
+        If cbo_Establecimientos.Text.Equals("") Then 'Si esta vacio
+            'Preguntar si desea crear uno nuevo
             If MsgBox("No selecciono ningun establecimiento. ¿Desea ingresar uno nuevo?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                'Habilitar/Inhabilitar objetos
+                cmd_Buscar.Enabled = False
                 group_Establecimiento.Enabled = True
                 group_Propietario.Enabled = True
-                cmd_Buscar.Enabled = False
                 cmd_Agregar.Enabled = True
+                cmd_Modificar.Enabled = False
+                cmd_Eliminar.Enabled = False
                 cmd_Parametros.Enabled = True
-            Else
+            Else 'Si no desea crear uno nuevo
                 MsgBox("Seleccione un establecimiento de la lista o ingrese el nombre correctamente.")
             End If
-        Else
-            group_Establecimiento.Enabled = True
-            group_Propietario.Enabled = True
-            cmd_Modificar.Enabled = True
+        Else 'Si contiene un establecimiento
+            Busquedas.guardarnrodicose(cbo_Establecimientos.Text)
+            Busquedas.buscarestablecimiento(cbo_Establecimientos.Text)
         End If
     End Sub
 
@@ -78,16 +84,20 @@
 
     End Sub
 
+    Private Sub cmd_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Eliminar.Click
+
+    End Sub
+
     Private Sub cmd_Parametros_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Parametros.Click
 
     End Sub
 
     Private Sub cmd_Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Cancelar.Click
-        If cmd_Buscar.Enabled.Equals(False) Then
+        If cmd_Buscar.Enabled.Equals(False) Then 'Si se esta creando un establecimiento
             If MsgBox("¿Desea cancelar el ingreso del establecimiento?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 Me.Close()
             End If
-        Else
+        Else 'Si no se esta creando un establecimiento
             Me.Close()
         End If
     End Sub

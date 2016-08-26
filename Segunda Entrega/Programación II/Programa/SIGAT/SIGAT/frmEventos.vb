@@ -9,17 +9,18 @@
     End Sub
 
     Private Sub cmd_Seleccionar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Seleccionar.Click
-        If txt_NroIdentificador.Text.Equals("") Then
+        If txt_NroIdentificador.Text.Equals("") Then 'Si no ingreso ningun animal
             MsgBox("Porfavor, ingrese un numero de animal.")
-        Else
+        Else 'Si ingreso animal
             tab_Eventos.Enabled = True
             lbl_NroAnimal.Text = txt_NroIdentificador.Text
         End If
     End Sub
 
     Private Sub cbo_Eventos_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbo_Eventos.SelectedIndexChanged
+        'Habilitar ingreso de informacion segun el tipo de evento seleccionado
         Select Case cbo_Eventos.SelectedIndex()
-            Case 2
+            Case 2 'Servicios
                 group_Servicio.Enabled = True
                 group_Enfermedad.Enabled = False
                 group_Muerte.Enabled = False
@@ -28,13 +29,13 @@
                 rdo_No.Checked = False
                 cbo_Medicacion.SelectedIndex = -1
                 cbo_Causa.SelectedIndex = -1
-            Case 3
+            Case 3 'Enfermedad
                 group_Servicio.Enabled = False
                 group_Enfermedad.Enabled = True
                 group_Muerte.Enabled = False
                 cbo_Servicios.SelectedIndex = -1
                 cbo_Causa.SelectedIndex = -1
-            Case 4
+            Case 4 'Muerte
                 group_Servicio.Enabled = False
                 group_Enfermedad.Enabled = False
                 group_Muerte.Enabled = True
@@ -45,6 +46,7 @@
                 cbo_Medicacion.SelectedIndex = -1
         End Select
 
+        'Habilitar boton guardar
         If cbo_Eventos.SelectedIndex > -1 Then
             cbo_GuardarEvento.Enabled = True
         Else
@@ -53,9 +55,9 @@
     End Sub
 
     Private Sub rdo_Si_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdo_Si.CheckedChanged
-        If rdo_Si.Checked Then
+        If rdo_Si.Checked Then 'Si recibe medicacion
             cbo_Medicacion.Enabled = True
-        Else
+        Else 'Si no recibe medicación
             cbo_Medicacion.Enabled = False
             cbo_Medicacion.SelectedIndex = -1
         End If

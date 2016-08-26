@@ -28,6 +28,10 @@ Partial Class frmConsultarProduccion
         Me.cbo_Establecimientos = New System.Windows.Forms.ComboBox()
         Me.date_FechaOrdenies = New System.Windows.Forms.DateTimePicker()
         Me.group_Datos = New System.Windows.Forms.GroupBox()
+        Me.cbo_Lote = New System.Windows.Forms.ComboBox()
+        Me.lbl_Lote = New System.Windows.Forms.Label()
+        Me.cbo_TipoLeche = New System.Windows.Forms.ComboBox()
+        Me.lbl_TipoLeche = New System.Windows.Forms.Label()
         Me.txt_CantidadTotal = New System.Windows.Forms.TextBox()
         Me.txt_TercerOrdenie = New System.Windows.Forms.TextBox()
         Me.txt_SegundoOrdenie = New System.Windows.Forms.TextBox()
@@ -42,10 +46,6 @@ Partial Class frmConsultarProduccion
         Me.lbl_PrimerOrdenie = New System.Windows.Forms.Label()
         Me.cmd_Volver = New System.Windows.Forms.Button()
         Me.cmd_VerGrafica = New System.Windows.Forms.Button()
-        Me.lbl_TipoLeche = New System.Windows.Forms.Label()
-        Me.cbo_TipoLeche = New System.Windows.Forms.ComboBox()
-        Me.lbl_Lote = New System.Windows.Forms.Label()
-        Me.cbo_Lote = New System.Windows.Forms.ComboBox()
         Me.group_Datos.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -123,6 +123,40 @@ Partial Class frmConsultarProduccion
         Me.group_Datos.TabIndex = 8
         Me.group_Datos.TabStop = False
         Me.group_Datos.Text = "Datos de producción"
+        '
+        'cbo_Lote
+        '
+        Me.cbo_Lote.FormattingEnabled = True
+        Me.cbo_Lote.Location = New System.Drawing.Point(51, 170)
+        Me.cbo_Lote.Name = "cbo_Lote"
+        Me.cbo_Lote.Size = New System.Drawing.Size(121, 24)
+        Me.cbo_Lote.TabIndex = 15
+        '
+        'lbl_Lote
+        '
+        Me.lbl_Lote.AutoSize = True
+        Me.lbl_Lote.Location = New System.Drawing.Point(8, 173)
+        Me.lbl_Lote.Name = "lbl_Lote"
+        Me.lbl_Lote.Size = New System.Drawing.Size(37, 16)
+        Me.lbl_Lote.TabIndex = 14
+        Me.lbl_Lote.Text = "Lote:"
+        '
+        'cbo_TipoLeche
+        '
+        Me.cbo_TipoLeche.FormattingEnabled = True
+        Me.cbo_TipoLeche.Location = New System.Drawing.Point(140, 140)
+        Me.cbo_TipoLeche.Name = "cbo_TipoLeche"
+        Me.cbo_TipoLeche.Size = New System.Drawing.Size(121, 24)
+        Me.cbo_TipoLeche.TabIndex = 13
+        '
+        'lbl_TipoLeche
+        '
+        Me.lbl_TipoLeche.AutoSize = True
+        Me.lbl_TipoLeche.Location = New System.Drawing.Point(7, 143)
+        Me.lbl_TipoLeche.Name = "lbl_TipoLeche"
+        Me.lbl_TipoLeche.Size = New System.Drawing.Size(89, 16)
+        Me.lbl_TipoLeche.TabIndex = 12
+        Me.lbl_TipoLeche.Text = "Tipo de leche:"
         '
         'txt_CantidadTotal
         '
@@ -264,42 +298,6 @@ Partial Class frmConsultarProduccion
         Me.cmd_VerGrafica.TabIndex = 10
         Me.cmd_VerGrafica.Text = "Ver Gráfica"
         Me.cmd_VerGrafica.UseVisualStyleBackColor = True
-        '
-        'lbl_TipoLeche
-        '
-        Me.lbl_TipoLeche.AutoSize = True
-        Me.lbl_TipoLeche.Location = New System.Drawing.Point(7, 143)
-        Me.lbl_TipoLeche.Name = "lbl_TipoLeche"
-        Me.lbl_TipoLeche.Size = New System.Drawing.Size(89, 16)
-        Me.lbl_TipoLeche.TabIndex = 12
-        Me.lbl_TipoLeche.Text = "Tipo de leche:"
-        '
-        'cbo_TipoLeche
-        '
-        Me.cbo_TipoLeche.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_TipoLeche.FormattingEnabled = True
-        Me.cbo_TipoLeche.Location = New System.Drawing.Point(140, 140)
-        Me.cbo_TipoLeche.Name = "cbo_TipoLeche"
-        Me.cbo_TipoLeche.Size = New System.Drawing.Size(121, 24)
-        Me.cbo_TipoLeche.TabIndex = 13
-        '
-        'lbl_Lote
-        '
-        Me.lbl_Lote.AutoSize = True
-        Me.lbl_Lote.Location = New System.Drawing.Point(8, 173)
-        Me.lbl_Lote.Name = "lbl_Lote"
-        Me.lbl_Lote.Size = New System.Drawing.Size(37, 16)
-        Me.lbl_Lote.TabIndex = 14
-        Me.lbl_Lote.Text = "Lote:"
-        '
-        'cbo_Lote
-        '
-        Me.cbo_Lote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Lote.FormattingEnabled = True
-        Me.cbo_Lote.Location = New System.Drawing.Point(51, 170)
-        Me.cbo_Lote.Name = "cbo_Lote"
-        Me.cbo_Lote.Size = New System.Drawing.Size(121, 24)
-        Me.cbo_Lote.TabIndex = 15
         '
         'frmConsultarProduccion
         '

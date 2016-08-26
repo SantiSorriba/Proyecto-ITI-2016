@@ -1,13 +1,8 @@
 ﻿Public Class frmPrincipal
 
     Private Sub frmPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Inhabilitar ventanas
-        menu_CerrarSesion.Enabled = False
-        menu_Establecimientos.Enabled = True
-        menu_Animales.Enabled = True
-        menu_Eventos.Enabled = True
-        menu_Usuarios.Enabled = True
-
+        'Inhabilitar acceso a ventanas
+        Cosas.inhabilitarfunciones()
         'Fecha actual
         lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
     End Sub
@@ -17,33 +12,21 @@
     End Sub
 
     Private Sub menu_CerrarSesion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menu_CerrarSesion.Click
-        'Pregunto si desea cerrar sesión
-        If MsgBox("¿Desea cerrar sesion?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            cn.Close()
-            Me.menu_Ingresar.Enabled = True
-            Me.menu_CerrarSesion.Enabled = False
-            Me.menu_Establecimientos.Enabled = False
-            Me.menu_Animales.Enabled = False
-            Me.menu_Eventos.Enabled = False
-            Me.menu_Usuarios.Enabled = False
+        'Preguntar si esta seguro de cerrar sesión
+        If MsgBox("¿Seguro desea cerrar sesion?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            'Cerrar conexión con la base de datos.
+            Conexión.cerrarconexion()
+            'Inhabilitar acceso a ventanas
+            Cosas.inhabilitarfunciones()
         End If
     End Sub
 
-    Private Sub menu_Idioma_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menu_Idioma.Click
-        frmIdioma.show()
-    End Sub
+    
 
     Private Sub menu_Salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menu_Salir.Click
-        If idioma.Equals(False) Then
-            If MsgBox("¿Desea salir completamente del sistema?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                MsgBox("Hasta luego!")
-                Me.Close()
-            End If
-        Else
-            If MsgBox("¿Do you want to exit?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                MsgBox("Goodbye!")
-                Me.Close()
-            End If
+        'Pregunto si esta seguro de salir
+        If MsgBox("¿Seguro desea salir completamente del sistema?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            Me.Close()
         End If
     End Sub
 
@@ -78,4 +61,5 @@
     Private Sub menu_Usuarios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menu_Usuarios.Click
         frmUsuarios.show()
     End Sub
+
 End Class

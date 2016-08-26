@@ -42,6 +42,8 @@ Partial Class frmUsuarios
         Me.cmd_AgregarTel = New System.Windows.Forms.Button()
         Me.cmd_EliminarTel = New System.Windows.Forms.Button()
         Me.panel_Usuario = New System.Windows.Forms.Panel()
+        Me.txt_NomUsu = New System.Windows.Forms.TextBox()
+        Me.lbl_Nombreusu = New System.Windows.Forms.Label()
         Me.cmd_Modificar = New System.Windows.Forms.Button()
         Me.cmd_Volver = New System.Windows.Forms.Button()
         Me.panel_Usuario.SuspendLayout()
@@ -128,6 +130,7 @@ Partial Class frmUsuarios
         '
         'txt_Cedula2
         '
+        Me.txt_Cedula2.Enabled = False
         Me.txt_Cedula2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_Cedula2.Location = New System.Drawing.Point(74, 72)
         Me.txt_Cedula2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -148,10 +151,9 @@ Partial Class frmUsuarios
         '
         'cbo_TipoUsuario
         '
-        Me.cbo_TipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_TipoUsuario.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_TipoUsuario.FormattingEnabled = True
-        Me.cbo_TipoUsuario.Items.AddRange(New Object() {"Administrador del sistema"})
+        Me.cbo_TipoUsuario.Items.AddRange(New Object() {"Administrador del Sistema", "Administrador de un establecimiento", "Gerente Administrador", "Auxiliar"})
         Me.cbo_TipoUsuario.Location = New System.Drawing.Point(122, 103)
         Me.cbo_TipoUsuario.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cbo_TipoUsuario.Name = "cbo_TipoUsuario"
@@ -191,7 +193,6 @@ Partial Class frmUsuarios
         '
         'cbo_Departamentos
         '
-        Me.cbo_Departamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_Departamentos.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_Departamentos.FormattingEnabled = True
         Me.cbo_Departamentos.Items.AddRange(New Object() {"Artigas", "Canelones", "Cerro Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja", "Maldonado", "Montevideo", "Paysandú", "Rio Negro", "Rivera", "Rocha", "Salto", "San José", "Soriano", "Tacuarembó", "Treinta y Tres"})
@@ -206,7 +207,7 @@ Partial Class frmUsuarios
         '
         Me.lbl_Teléfonos.AutoSize = True
         Me.lbl_Teléfonos.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Teléfonos.Location = New System.Drawing.Point(8, 218)
+        Me.lbl_Teléfonos.Location = New System.Drawing.Point(8, 230)
         Me.lbl_Teléfonos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_Teléfonos.Name = "lbl_Teléfonos"
         Me.lbl_Teléfonos.Size = New System.Drawing.Size(74, 17)
@@ -217,7 +218,7 @@ Partial Class frmUsuarios
         '
         Me.cbo_Telefonos.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_Telefonos.FormattingEnabled = True
-        Me.cbo_Telefonos.Location = New System.Drawing.Point(93, 215)
+        Me.cbo_Telefonos.Location = New System.Drawing.Point(93, 227)
         Me.cbo_Telefonos.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cbo_Telefonos.Name = "cbo_Telefonos"
         Me.cbo_Telefonos.Size = New System.Drawing.Size(108, 25)
@@ -226,7 +227,7 @@ Partial Class frmUsuarios
         'cmd_AgregarTel
         '
         Me.cmd_AgregarTel.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_AgregarTel.Location = New System.Drawing.Point(205, 213)
+        Me.cmd_AgregarTel.Location = New System.Drawing.Point(205, 227)
         Me.cmd_AgregarTel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cmd_AgregarTel.Name = "cmd_AgregarTel"
         Me.cmd_AgregarTel.Size = New System.Drawing.Size(118, 26)
@@ -237,7 +238,7 @@ Partial Class frmUsuarios
         'cmd_EliminarTel
         '
         Me.cmd_EliminarTel.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_EliminarTel.Location = New System.Drawing.Point(205, 244)
+        Me.cmd_EliminarTel.Location = New System.Drawing.Point(205, 259)
         Me.cmd_EliminarTel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cmd_EliminarTel.Name = "cmd_EliminarTel"
         Me.cmd_EliminarTel.Size = New System.Drawing.Size(118, 26)
@@ -247,6 +248,8 @@ Partial Class frmUsuarios
         '
         'panel_Usuario
         '
+        Me.panel_Usuario.Controls.Add(Me.txt_NomUsu)
+        Me.panel_Usuario.Controls.Add(Me.lbl_Nombreusu)
         Me.panel_Usuario.Controls.Add(Me.cmd_EliminarTel)
         Me.panel_Usuario.Controls.Add(Me.cmd_AgregarTel)
         Me.panel_Usuario.Controls.Add(Me.cbo_Telefonos)
@@ -266,13 +269,30 @@ Partial Class frmUsuarios
         Me.panel_Usuario.Enabled = False
         Me.panel_Usuario.Location = New System.Drawing.Point(5, 41)
         Me.panel_Usuario.Name = "panel_Usuario"
-        Me.panel_Usuario.Size = New System.Drawing.Size(331, 279)
+        Me.panel_Usuario.Size = New System.Drawing.Size(331, 288)
         Me.panel_Usuario.TabIndex = 19
+        '
+        'txt_NomUsu
+        '
+        Me.txt_NomUsu.Enabled = False
+        Me.txt_NomUsu.Location = New System.Drawing.Point(151, 195)
+        Me.txt_NomUsu.Name = "txt_NomUsu"
+        Me.txt_NomUsu.Size = New System.Drawing.Size(172, 25)
+        Me.txt_NomUsu.TabIndex = 20
+        '
+        'lbl_Nombreusu
+        '
+        Me.lbl_Nombreusu.AutoSize = True
+        Me.lbl_Nombreusu.Location = New System.Drawing.Point(9, 199)
+        Me.lbl_Nombreusu.Name = "lbl_Nombreusu"
+        Me.lbl_Nombreusu.Size = New System.Drawing.Size(136, 17)
+        Me.lbl_Nombreusu.TabIndex = 19
+        Me.lbl_Nombreusu.Text = "Nombre de usuario:"
         '
         'cmd_Modificar
         '
         Me.cmd_Modificar.Enabled = False
-        Me.cmd_Modificar.Location = New System.Drawing.Point(5, 326)
+        Me.cmd_Modificar.Location = New System.Drawing.Point(5, 335)
         Me.cmd_Modificar.Name = "cmd_Modificar"
         Me.cmd_Modificar.Size = New System.Drawing.Size(123, 28)
         Me.cmd_Modificar.TabIndex = 20
@@ -281,7 +301,7 @@ Partial Class frmUsuarios
         '
         'cmd_Volver
         '
-        Me.cmd_Volver.Location = New System.Drawing.Point(261, 326)
+        Me.cmd_Volver.Location = New System.Drawing.Point(261, 335)
         Me.cmd_Volver.Name = "cmd_Volver"
         Me.cmd_Volver.Size = New System.Drawing.Size(75, 28)
         Me.cmd_Volver.TabIndex = 21
@@ -294,7 +314,7 @@ Partial Class frmUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(343, 362)
+        Me.ClientSize = New System.Drawing.Size(343, 375)
         Me.Controls.Add(Me.cmd_Volver)
         Me.Controls.Add(Me.cmd_Modificar)
         Me.Controls.Add(Me.panel_Usuario)
@@ -335,4 +355,6 @@ Partial Class frmUsuarios
     Friend WithEvents panel_Usuario As System.Windows.Forms.Panel
     Friend WithEvents cmd_Modificar As System.Windows.Forms.Button
     Friend WithEvents cmd_Volver As System.Windows.Forms.Button
+    Friend WithEvents txt_NomUsu As System.Windows.Forms.TextBox
+    Friend WithEvents lbl_Nombreusu As System.Windows.Forms.Label
 End Class

@@ -2,6 +2,10 @@
 
     Private Sub frmOrdenies_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.MdiParent = frmPrincipal
+        'Cargar lotes
+        Busquedas.cargarlotes(cbo_Lotes)
+        'Cargar tipos de leche
+        Busquedas.cargarleche(cbo_TipoLeche)
     End Sub
 
     Private Sub txt_Cant1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Cant1.KeyPress
@@ -53,6 +57,10 @@
             group_TercerOrdenie.Enabled = False
             txt_Cant3.Clear()
         End If
+    End Sub
+
+    Private Sub cmd_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Guardar.Click
+
     End Sub
 
     Private Sub cmdCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_Cancelar.Click

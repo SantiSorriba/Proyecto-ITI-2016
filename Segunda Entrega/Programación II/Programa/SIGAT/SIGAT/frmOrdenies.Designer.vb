@@ -25,7 +25,7 @@ Partial Class frmOrdenies
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.date_FechaOrdenie = New System.Windows.Forms.DateTimePicker()
         Me.lbl_Lote = New System.Windows.Forms.Label()
-        Me.cboLotes = New System.Windows.Forms.ComboBox()
+        Me.cbo_Lotes = New System.Windows.Forms.ComboBox()
         Me.cmd_Cancelar = New System.Windows.Forms.Button()
         Me.cmd_Guardar = New System.Windows.Forms.Button()
         Me.chk_SegundoOrdenie = New System.Windows.Forms.CheckBox()
@@ -41,19 +41,21 @@ Partial Class frmOrdenies
         Me.lbl_Lts2 = New System.Windows.Forms.Label()
         Me.txt_Cant2 = New System.Windows.Forms.TextBox()
         Me.lbl_Cant2 = New System.Windows.Forms.Label()
-        Me.time_Fin2 = New System.Windows.Forms.DateTimePicker()
-        Me.time_Inicio2 = New System.Windows.Forms.DateTimePicker()
-        Me.lbl_HoraFin2 = New System.Windows.Forms.Label()
-        Me.lbl_HoraInicio2 = New System.Windows.Forms.Label()
         Me.chk_TercerOrdenie = New System.Windows.Forms.CheckBox()
         Me.chk_PrimerOrdenie = New System.Windows.Forms.CheckBox()
         Me.group_PrimerOrdenie = New System.Windows.Forms.GroupBox()
         Me.lbl_Lts1 = New System.Windows.Forms.Label()
         Me.txt_Cant1 = New System.Windows.Forms.TextBox()
         Me.lbl_Cant1 = New System.Windows.Forms.Label()
+        Me.lbl_Tipo = New System.Windows.Forms.Label()
+        Me.cbo_TipoLeche = New System.Windows.Forms.ComboBox()
+        Me.time_Fin2 = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_HoraFin2 = New System.Windows.Forms.Label()
+        Me.time_Inicio2 = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_HoraInicio2 = New System.Windows.Forms.Label()
         Me.time_Fin1 = New System.Windows.Forms.DateTimePicker()
-        Me.time_Inicio1 = New System.Windows.Forms.DateTimePicker()
         Me.lbl_HoraFin1 = New System.Windows.Forms.Label()
+        Me.time_Inicio1 = New System.Windows.Forms.DateTimePicker()
         Me.lbl_HoraInicio1 = New System.Windows.Forms.Label()
         Me.group_TercerOrdenie.SuspendLayout()
         Me.group_SegundoOrdenie.SuspendLayout()
@@ -86,15 +88,13 @@ Partial Class frmOrdenies
         Me.lbl_Lote.TabIndex = 2
         Me.lbl_Lote.Text = "Lote:"
         '
-        'cboLotes
+        'cbo_Lotes
         '
-        Me.cboLotes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboLotes.FormattingEnabled = True
-        Me.cboLotes.Items.AddRange(New Object() {"Vacas para ordeñe"})
-        Me.cboLotes.Location = New System.Drawing.Point(218, 6)
-        Me.cboLotes.Name = "cboLotes"
-        Me.cboLotes.Size = New System.Drawing.Size(154, 24)
-        Me.cboLotes.TabIndex = 14
+        Me.cbo_Lotes.FormattingEnabled = True
+        Me.cbo_Lotes.Location = New System.Drawing.Point(218, 6)
+        Me.cbo_Lotes.Name = "cbo_Lotes"
+        Me.cbo_Lotes.Size = New System.Drawing.Size(154, 24)
+        Me.cbo_Lotes.TabIndex = 14
         '
         'cmd_Cancelar
         '
@@ -245,40 +245,6 @@ Partial Class frmOrdenies
         Me.lbl_Cant2.TabIndex = 15
         Me.lbl_Cant2.Text = "Cantidad Producida:"
         '
-        'time_Fin2
-        '
-        Me.time_Fin2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.time_Fin2.Location = New System.Drawing.Point(283, 24)
-        Me.time_Fin2.Name = "time_Fin2"
-        Me.time_Fin2.Size = New System.Drawing.Size(73, 22)
-        Me.time_Fin2.TabIndex = 11
-        '
-        'time_Inicio2
-        '
-        Me.time_Inicio2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.time_Inicio2.Location = New System.Drawing.Point(103, 24)
-        Me.time_Inicio2.Name = "time_Inicio2"
-        Me.time_Inicio2.Size = New System.Drawing.Size(73, 22)
-        Me.time_Inicio2.TabIndex = 10
-        '
-        'lbl_HoraFin2
-        '
-        Me.lbl_HoraFin2.AutoSize = True
-        Me.lbl_HoraFin2.Location = New System.Drawing.Point(203, 28)
-        Me.lbl_HoraFin2.Name = "lbl_HoraFin2"
-        Me.lbl_HoraFin2.Size = New System.Drawing.Size(74, 16)
-        Me.lbl_HoraFin2.TabIndex = 9
-        Me.lbl_HoraFin2.Text = "Hora de fin:"
-        '
-        'lbl_HoraInicio2
-        '
-        Me.lbl_HoraInicio2.AutoSize = True
-        Me.lbl_HoraInicio2.Location = New System.Drawing.Point(6, 28)
-        Me.lbl_HoraInicio2.Name = "lbl_HoraInicio2"
-        Me.lbl_HoraInicio2.Size = New System.Drawing.Size(91, 16)
-        Me.lbl_HoraInicio2.TabIndex = 8
-        Me.lbl_HoraInicio2.Text = "Hora de inicio:"
-        '
         'chk_TercerOrdenie
         '
         Me.chk_TercerOrdenie.AutoSize = True
@@ -344,6 +310,57 @@ Partial Class frmOrdenies
         Me.lbl_Cant1.TabIndex = 12
         Me.lbl_Cant1.Text = "Cantidad Producida:"
         '
+        'lbl_Tipo
+        '
+        Me.lbl_Tipo.AutoSize = True
+        Me.lbl_Tipo.Location = New System.Drawing.Point(175, 40)
+        Me.lbl_Tipo.Name = "lbl_Tipo"
+        Me.lbl_Tipo.Size = New System.Drawing.Size(36, 16)
+        Me.lbl_Tipo.TabIndex = 23
+        Me.lbl_Tipo.Text = "Tipo:"
+        '
+        'cbo_TipoLeche
+        '
+        Me.cbo_TipoLeche.FormattingEnabled = True
+        Me.cbo_TipoLeche.Location = New System.Drawing.Point(218, 36)
+        Me.cbo_TipoLeche.Name = "cbo_TipoLeche"
+        Me.cbo_TipoLeche.Size = New System.Drawing.Size(154, 24)
+        Me.cbo_TipoLeche.TabIndex = 24
+        '
+        'time_Fin2
+        '
+        Me.time_Fin2.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.time_Fin2.Location = New System.Drawing.Point(283, 24)
+        Me.time_Fin2.Name = "time_Fin2"
+        Me.time_Fin2.Size = New System.Drawing.Size(73, 22)
+        Me.time_Fin2.TabIndex = 11
+        '
+        'lbl_HoraFin2
+        '
+        Me.lbl_HoraFin2.AutoSize = True
+        Me.lbl_HoraFin2.Location = New System.Drawing.Point(203, 28)
+        Me.lbl_HoraFin2.Name = "lbl_HoraFin2"
+        Me.lbl_HoraFin2.Size = New System.Drawing.Size(74, 16)
+        Me.lbl_HoraFin2.TabIndex = 9
+        Me.lbl_HoraFin2.Text = "Hora de fin:"
+        '
+        'time_Inicio2
+        '
+        Me.time_Inicio2.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.time_Inicio2.Location = New System.Drawing.Point(103, 24)
+        Me.time_Inicio2.Name = "time_Inicio2"
+        Me.time_Inicio2.Size = New System.Drawing.Size(73, 22)
+        Me.time_Inicio2.TabIndex = 10
+        '
+        'lbl_HoraInicio2
+        '
+        Me.lbl_HoraInicio2.AutoSize = True
+        Me.lbl_HoraInicio2.Location = New System.Drawing.Point(6, 28)
+        Me.lbl_HoraInicio2.Name = "lbl_HoraInicio2"
+        Me.lbl_HoraInicio2.Size = New System.Drawing.Size(91, 16)
+        Me.lbl_HoraInicio2.TabIndex = 8
+        Me.lbl_HoraInicio2.Text = "Hora de inicio:"
+        '
         'time_Fin1
         '
         Me.time_Fin1.Format = System.Windows.Forms.DateTimePickerFormat.Time
@@ -351,14 +368,6 @@ Partial Class frmOrdenies
         Me.time_Fin1.Name = "time_Fin1"
         Me.time_Fin1.Size = New System.Drawing.Size(73, 22)
         Me.time_Fin1.TabIndex = 11
-        '
-        'time_Inicio1
-        '
-        Me.time_Inicio1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.time_Inicio1.Location = New System.Drawing.Point(103, 24)
-        Me.time_Inicio1.Name = "time_Inicio1"
-        Me.time_Inicio1.Size = New System.Drawing.Size(73, 22)
-        Me.time_Inicio1.TabIndex = 10
         '
         'lbl_HoraFin1
         '
@@ -368,6 +377,14 @@ Partial Class frmOrdenies
         Me.lbl_HoraFin1.Size = New System.Drawing.Size(74, 16)
         Me.lbl_HoraFin1.TabIndex = 9
         Me.lbl_HoraFin1.Text = "Hora de fin:"
+        '
+        'time_Inicio1
+        '
+        Me.time_Inicio1.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.time_Inicio1.Location = New System.Drawing.Point(103, 24)
+        Me.time_Inicio1.Name = "time_Inicio1"
+        Me.time_Inicio1.Size = New System.Drawing.Size(73, 22)
+        Me.time_Inicio1.TabIndex = 10
         '
         'lbl_HoraInicio1
         '
@@ -385,6 +402,8 @@ Partial Class frmOrdenies
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(384, 471)
+        Me.Controls.Add(Me.cbo_TipoLeche)
+        Me.Controls.Add(Me.lbl_Tipo)
         Me.Controls.Add(Me.cmd_Cancelar)
         Me.Controls.Add(Me.cmd_Guardar)
         Me.Controls.Add(Me.chk_SegundoOrdenie)
@@ -393,7 +412,7 @@ Partial Class frmOrdenies
         Me.Controls.Add(Me.chk_TercerOrdenie)
         Me.Controls.Add(Me.chk_PrimerOrdenie)
         Me.Controls.Add(Me.group_PrimerOrdenie)
-        Me.Controls.Add(Me.cboLotes)
+        Me.Controls.Add(Me.cbo_Lotes)
         Me.Controls.Add(Me.lbl_Lote)
         Me.Controls.Add(Me.date_FechaOrdenie)
         Me.Controls.Add(Me.lbl_Fecha)
@@ -416,7 +435,7 @@ Partial Class frmOrdenies
     Friend WithEvents lbl_Fecha As System.Windows.Forms.Label
     Friend WithEvents date_FechaOrdenie As System.Windows.Forms.DateTimePicker
     Friend WithEvents lbl_Lote As System.Windows.Forms.Label
-    Friend WithEvents cboLotes As System.Windows.Forms.ComboBox
+    Friend WithEvents cbo_Lotes As System.Windows.Forms.ComboBox
     Friend WithEvents cmd_Cancelar As System.Windows.Forms.Button
     Friend WithEvents cmd_Guardar As System.Windows.Forms.Button
     Friend WithEvents chk_SegundoOrdenie As System.Windows.Forms.CheckBox
@@ -432,16 +451,18 @@ Partial Class frmOrdenies
     Friend WithEvents lbl_Lts2 As System.Windows.Forms.Label
     Friend WithEvents txt_Cant2 As System.Windows.Forms.TextBox
     Friend WithEvents lbl_Cant2 As System.Windows.Forms.Label
-    Friend WithEvents time_Fin2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents time_Inicio2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents lbl_HoraFin2 As System.Windows.Forms.Label
-    Friend WithEvents lbl_HoraInicio2 As System.Windows.Forms.Label
     Friend WithEvents chk_TercerOrdenie As System.Windows.Forms.CheckBox
     Friend WithEvents chk_PrimerOrdenie As System.Windows.Forms.CheckBox
     Friend WithEvents group_PrimerOrdenie As System.Windows.Forms.GroupBox
     Friend WithEvents lbl_Lts1 As System.Windows.Forms.Label
     Friend WithEvents txt_Cant1 As System.Windows.Forms.TextBox
     Friend WithEvents lbl_Cant1 As System.Windows.Forms.Label
+    Friend WithEvents lbl_Tipo As System.Windows.Forms.Label
+    Friend WithEvents cbo_TipoLeche As System.Windows.Forms.ComboBox
+    Friend WithEvents time_Fin2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents time_Inicio2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lbl_HoraFin2 As System.Windows.Forms.Label
+    Friend WithEvents lbl_HoraInicio2 As System.Windows.Forms.Label
     Friend WithEvents time_Fin1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents time_Inicio1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents lbl_HoraFin1 As System.Windows.Forms.Label

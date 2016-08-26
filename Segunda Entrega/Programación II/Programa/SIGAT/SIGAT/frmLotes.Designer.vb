@@ -39,6 +39,7 @@ Partial Class frmLotes
         Me.cmd_Volver = New System.Windows.Forms.Button()
         Me.panel_Lote = New System.Windows.Forms.Panel()
         Me.cmd_EliminarLote = New System.Windows.Forms.Button()
+        Me.cmd_Verificar = New System.Windows.Forms.Button()
         CType(Me.num_CantAnimales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_Lote.SuspendLayout()
         Me.SuspendLayout()
@@ -136,7 +137,6 @@ Partial Class frmLotes
         '
         'cbo_Criterio
         '
-        Me.cbo_Criterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_Criterio.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_Criterio.FormattingEnabled = True
         Me.cbo_Criterio.Items.AddRange(New Object() {"Enfermedad", "Ordeñe", "Preñadas", "Secas", "Animales no productivos"})
@@ -148,7 +148,7 @@ Partial Class frmLotes
         'cmd_AgregarLote
         '
         Me.cmd_AgregarLote.Enabled = False
-        Me.cmd_AgregarLote.Location = New System.Drawing.Point(7, 204)
+        Me.cmd_AgregarLote.Location = New System.Drawing.Point(7, 193)
         Me.cmd_AgregarLote.Name = "cmd_AgregarLote"
         Me.cmd_AgregarLote.Size = New System.Drawing.Size(76, 27)
         Me.cmd_AgregarLote.TabIndex = 12
@@ -158,7 +158,7 @@ Partial Class frmLotes
         'cmd_ModificarLote
         '
         Me.cmd_ModificarLote.Enabled = False
-        Me.cmd_ModificarLote.Location = New System.Drawing.Point(87, 204)
+        Me.cmd_ModificarLote.Location = New System.Drawing.Point(87, 193)
         Me.cmd_ModificarLote.Name = "cmd_ModificarLote"
         Me.cmd_ModificarLote.Size = New System.Drawing.Size(78, 27)
         Me.cmd_ModificarLote.TabIndex = 13
@@ -167,7 +167,7 @@ Partial Class frmLotes
         '
         'cmd_Volver
         '
-        Me.cmd_Volver.Location = New System.Drawing.Point(253, 204)
+        Me.cmd_Volver.Location = New System.Drawing.Point(253, 193)
         Me.cmd_Volver.Name = "cmd_Volver"
         Me.cmd_Volver.Size = New System.Drawing.Size(68, 27)
         Me.cmd_Volver.TabIndex = 14
@@ -176,6 +176,7 @@ Partial Class frmLotes
         '
         'panel_Lote
         '
+        Me.panel_Lote.Controls.Add(Me.cmd_Verificar)
         Me.panel_Lote.Controls.Add(Me.cbo_Criterio)
         Me.panel_Lote.Controls.Add(Me.lbl_Criterio)
         Me.panel_Lote.Controls.Add(Me.cmd_AgregarAnimales)
@@ -186,7 +187,7 @@ Partial Class frmLotes
         Me.panel_Lote.Controls.Add(Me.txt_NumLote2)
         Me.panel_Lote.Controls.Add(Me.lbl_NroLote2)
         Me.panel_Lote.Enabled = False
-        Me.panel_Lote.Location = New System.Drawing.Point(5, 57)
+        Me.panel_Lote.Location = New System.Drawing.Point(5, 44)
         Me.panel_Lote.Name = "panel_Lote"
         Me.panel_Lote.Size = New System.Drawing.Size(316, 141)
         Me.panel_Lote.TabIndex = 15
@@ -194,12 +195,22 @@ Partial Class frmLotes
         'cmd_EliminarLote
         '
         Me.cmd_EliminarLote.Enabled = False
-        Me.cmd_EliminarLote.Location = New System.Drawing.Point(171, 204)
+        Me.cmd_EliminarLote.Location = New System.Drawing.Point(171, 193)
         Me.cmd_EliminarLote.Name = "cmd_EliminarLote"
         Me.cmd_EliminarLote.Size = New System.Drawing.Size(78, 27)
         Me.cmd_EliminarLote.TabIndex = 16
         Me.cmd_EliminarLote.Text = "Eliminar"
         Me.cmd_EliminarLote.UseVisualStyleBackColor = True
+        '
+        'cmd_Verificar
+        '
+        Me.cmd_Verificar.Enabled = False
+        Me.cmd_Verificar.Location = New System.Drawing.Point(180, 9)
+        Me.cmd_Verificar.Name = "cmd_Verificar"
+        Me.cmd_Verificar.Size = New System.Drawing.Size(129, 25)
+        Me.cmd_Verificar.TabIndex = 12
+        Me.cmd_Verificar.Text = "Verificar numero"
+        Me.cmd_Verificar.UseVisualStyleBackColor = True
         '
         'frmLotes
         '
@@ -207,7 +218,7 @@ Partial Class frmLotes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(326, 272)
+        Me.ClientSize = New System.Drawing.Size(326, 227)
         Me.Controls.Add(Me.cmd_EliminarLote)
         Me.Controls.Add(Me.cmd_Volver)
         Me.Controls.Add(Me.panel_Lote)
@@ -246,4 +257,5 @@ Partial Class frmLotes
     Friend WithEvents cmd_Volver As System.Windows.Forms.Button
     Friend WithEvents panel_Lote As System.Windows.Forms.Panel
     Friend WithEvents cmd_EliminarLote As System.Windows.Forms.Button
+    Friend WithEvents cmd_Verificar As System.Windows.Forms.Button
 End Class

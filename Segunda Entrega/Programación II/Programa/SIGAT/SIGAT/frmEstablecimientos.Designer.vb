@@ -66,6 +66,7 @@ Partial Class frmEstablecimientos
         Me.cmd_Modificar = New System.Windows.Forms.Button()
         Me.cmd_Cancelar = New System.Windows.Forms.Button()
         Me.cmd_Parametros = New System.Windows.Forms.Button()
+        Me.cmd_Eliminar = New System.Windows.Forms.Button()
         Me.group_Establecimiento.SuspendLayout()
         Me.group_Propietario.SuspendLayout()
         Me.SuspendLayout()
@@ -202,7 +203,6 @@ Partial Class frmEstablecimientos
         '
         'cbo_DptoEstablecimiento
         '
-        Me.cbo_DptoEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_DptoEstablecimiento.FormattingEnabled = True
         Me.cbo_DptoEstablecimiento.Items.AddRange(New Object() {"Artigas", "Canelones", "Cerro Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja", "Maldonado", "Paysandú", "Rio Negro", "Rivera", "Rocha", "Salto", "San José", "Soriano", "Tacuarembó", "Treinta y Tres"})
         Me.cbo_DptoEstablecimiento.Location = New System.Drawing.Point(429, 50)
@@ -382,7 +382,6 @@ Partial Class frmEstablecimientos
         '
         'cbo_DptoPropietario
         '
-        Me.cbo_DptoPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_DptoPropietario.FormattingEnabled = True
         Me.cbo_DptoPropietario.Items.AddRange(New Object() {"Artigas", "Canelones", "Cerro Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja", "Maldonado", "Montevideo", "Paysandú", "Rio Negro", "Rivera", "Rocha", "Salto", "San José", "Soriano", "Tacuarembó", "Treinta y Tres"})
         Me.cbo_DptoPropietario.Location = New System.Drawing.Point(103, 81)
@@ -427,7 +426,7 @@ Partial Class frmEstablecimientos
         '
         Me.lbl_TelefonosPropietario.AutoSize = True
         Me.lbl_TelefonosPropietario.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_TelefonosPropietario.Location = New System.Drawing.Point(230, 86)
+        Me.lbl_TelefonosPropietario.Location = New System.Drawing.Point(227, 86)
         Me.lbl_TelefonosPropietario.Name = "lbl_TelefonosPropietario"
         Me.lbl_TelefonosPropietario.Size = New System.Drawing.Size(66, 16)
         Me.lbl_TelefonosPropietario.TabIndex = 5
@@ -489,7 +488,7 @@ Partial Class frmEstablecimientos
         Me.cmd_Agregar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmd_Agregar.Location = New System.Drawing.Point(12, 360)
         Me.cmd_Agregar.Name = "cmd_Agregar"
-        Me.cmd_Agregar.Size = New System.Drawing.Size(131, 28)
+        Me.cmd_Agregar.Size = New System.Drawing.Size(99, 28)
         Me.cmd_Agregar.TabIndex = 5
         Me.cmd_Agregar.Text = "Agregar "
         Me.cmd_Agregar.UseVisualStyleBackColor = True
@@ -498,9 +497,9 @@ Partial Class frmEstablecimientos
         '
         Me.cmd_Modificar.Enabled = False
         Me.cmd_Modificar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_Modificar.Location = New System.Drawing.Point(157, 360)
+        Me.cmd_Modificar.Location = New System.Drawing.Point(115, 360)
         Me.cmd_Modificar.Name = "cmd_Modificar"
-        Me.cmd_Modificar.Size = New System.Drawing.Size(131, 28)
+        Me.cmd_Modificar.Size = New System.Drawing.Size(104, 28)
         Me.cmd_Modificar.TabIndex = 6
         Me.cmd_Modificar.Text = "Modificar"
         Me.cmd_Modificar.UseVisualStyleBackColor = True
@@ -508,9 +507,9 @@ Partial Class frmEstablecimientos
         'cmd_Cancelar
         '
         Me.cmd_Cancelar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_Cancelar.Location = New System.Drawing.Point(446, 360)
+        Me.cmd_Cancelar.Location = New System.Drawing.Point(460, 360)
         Me.cmd_Cancelar.Name = "cmd_Cancelar"
-        Me.cmd_Cancelar.Size = New System.Drawing.Size(131, 28)
+        Me.cmd_Cancelar.Size = New System.Drawing.Size(117, 28)
         Me.cmd_Cancelar.TabIndex = 8
         Me.cmd_Cancelar.Text = "Cancelar"
         Me.cmd_Cancelar.UseVisualStyleBackColor = True
@@ -519,12 +518,23 @@ Partial Class frmEstablecimientos
         '
         Me.cmd_Parametros.Enabled = False
         Me.cmd_Parametros.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_Parametros.Location = New System.Drawing.Point(303, 360)
+        Me.cmd_Parametros.Location = New System.Drawing.Point(343, 360)
         Me.cmd_Parametros.Name = "cmd_Parametros"
-        Me.cmd_Parametros.Size = New System.Drawing.Size(131, 28)
+        Me.cmd_Parametros.Size = New System.Drawing.Size(111, 28)
         Me.cmd_Parametros.TabIndex = 7
         Me.cmd_Parametros.Text = "Parámetros"
         Me.cmd_Parametros.UseVisualStyleBackColor = True
+        '
+        'cmd_Eliminar
+        '
+        Me.cmd_Eliminar.Enabled = False
+        Me.cmd_Eliminar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_Eliminar.Location = New System.Drawing.Point(225, 360)
+        Me.cmd_Eliminar.Name = "cmd_Eliminar"
+        Me.cmd_Eliminar.Size = New System.Drawing.Size(112, 28)
+        Me.cmd_Eliminar.TabIndex = 9
+        Me.cmd_Eliminar.Text = "Eliminar"
+        Me.cmd_Eliminar.UseVisualStyleBackColor = True
         '
         'frmEstablecimientos
         '
@@ -533,6 +543,7 @@ Partial Class frmEstablecimientos
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(589, 399)
+        Me.Controls.Add(Me.cmd_Eliminar)
         Me.Controls.Add(Me.cmd_Parametros)
         Me.Controls.Add(Me.cmd_Cancelar)
         Me.Controls.Add(Me.cmd_Modificar)
@@ -598,4 +609,5 @@ Partial Class frmEstablecimientos
     Friend WithEvents cmd_Modificar As System.Windows.Forms.Button
     Friend WithEvents cmd_Cancelar As System.Windows.Forms.Button
     Friend WithEvents cmd_Parametros As System.Windows.Forms.Button
+    Friend WithEvents cmd_Eliminar As System.Windows.Forms.Button
 End Class

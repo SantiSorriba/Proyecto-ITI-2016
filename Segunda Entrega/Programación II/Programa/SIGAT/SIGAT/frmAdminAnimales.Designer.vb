@@ -33,24 +33,21 @@ Partial Class frmAdminAnimales
         Me.lbl_Sexo = New System.Windows.Forms.Label()
         Me.lbl_TipoAnimal = New System.Windows.Forms.Label()
         Me.lbl_LugarActual = New System.Windows.Forms.Label()
-        Me.lbl_Peso = New System.Windows.Forms.Label()
-        Me.lbl_Kg = New System.Windows.Forms.Label()
         Me.panel_Animal = New System.Windows.Forms.Panel()
+        Me.txt_Raza = New System.Windows.Forms.TextBox()
         Me.cmd_Eliminar = New System.Windows.Forms.Button()
         Me.cmd_Modificar = New System.Windows.Forms.Button()
         Me.cmd_Agregar = New System.Windows.Forms.Button()
-        Me.txt_Peso = New System.Windows.Forms.TextBox()
         Me.cbo_LugarActual = New System.Windows.Forms.ComboBox()
         Me.rdo_Hembra = New System.Windows.Forms.RadioButton()
         Me.rdo_Macho = New System.Windows.Forms.RadioButton()
         Me.date_FechaNac = New System.Windows.Forms.DateTimePicker()
         Me.cbo_TipoAnimal = New System.Windows.Forms.ComboBox()
         Me.cbo_Establecimientos = New System.Windows.Forms.ComboBox()
-        Me.cbo_Raza = New System.Windows.Forms.ComboBox()
         Me.txt_Nombre = New System.Windows.Forms.TextBox()
         Me.cmd_Verificar = New System.Windows.Forms.Button()
         Me.txt_NroIdentificador2 = New System.Windows.Forms.TextBox()
-        Me.cmd_Cancelar = New System.Windows.Forms.Button()
+        Me.cmd_Volver = New System.Windows.Forms.Button()
         Me.panel_Animal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -162,44 +159,21 @@ Partial Class frmAdminAnimales
         Me.lbl_LugarActual.TabIndex = 10
         Me.lbl_LugarActual.Text = "Lugar actual del animal:"
         '
-        'lbl_Peso
-        '
-        Me.lbl_Peso.AutoSize = True
-        Me.lbl_Peso.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Peso.Location = New System.Drawing.Point(3, 238)
-        Me.lbl_Peso.Name = "lbl_Peso"
-        Me.lbl_Peso.Size = New System.Drawing.Size(42, 16)
-        Me.lbl_Peso.TabIndex = 11
-        Me.lbl_Peso.Text = "Peso:"
-        '
-        'lbl_Kg
-        '
-        Me.lbl_Kg.AutoSize = True
-        Me.lbl_Kg.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Kg.Location = New System.Drawing.Point(132, 238)
-        Me.lbl_Kg.Name = "lbl_Kg"
-        Me.lbl_Kg.Size = New System.Drawing.Size(28, 16)
-        Me.lbl_Kg.TabIndex = 12
-        Me.lbl_Kg.Text = "Kg."
-        '
         'panel_Animal
         '
+        Me.panel_Animal.Controls.Add(Me.txt_Raza)
         Me.panel_Animal.Controls.Add(Me.cmd_Eliminar)
         Me.panel_Animal.Controls.Add(Me.cmd_Modificar)
         Me.panel_Animal.Controls.Add(Me.cmd_Agregar)
-        Me.panel_Animal.Controls.Add(Me.txt_Peso)
         Me.panel_Animal.Controls.Add(Me.cbo_LugarActual)
         Me.panel_Animal.Controls.Add(Me.rdo_Hembra)
         Me.panel_Animal.Controls.Add(Me.rdo_Macho)
         Me.panel_Animal.Controls.Add(Me.date_FechaNac)
         Me.panel_Animal.Controls.Add(Me.cbo_TipoAnimal)
         Me.panel_Animal.Controls.Add(Me.cbo_Establecimientos)
-        Me.panel_Animal.Controls.Add(Me.cbo_Raza)
         Me.panel_Animal.Controls.Add(Me.txt_Nombre)
         Me.panel_Animal.Controls.Add(Me.cmd_Verificar)
         Me.panel_Animal.Controls.Add(Me.txt_NroIdentificador2)
-        Me.panel_Animal.Controls.Add(Me.lbl_Kg)
-        Me.panel_Animal.Controls.Add(Me.lbl_Peso)
         Me.panel_Animal.Controls.Add(Me.lbl_LugarActual)
         Me.panel_Animal.Controls.Add(Me.lbl_TipoAnimal)
         Me.panel_Animal.Controls.Add(Me.lbl_Sexo)
@@ -214,6 +188,13 @@ Partial Class frmAdminAnimales
         Me.panel_Animal.Name = "panel_Animal"
         Me.panel_Animal.Size = New System.Drawing.Size(330, 304)
         Me.panel_Animal.TabIndex = 13
+        '
+        'txt_Raza
+        '
+        Me.txt_Raza.Location = New System.Drawing.Point(65, 64)
+        Me.txt_Raza.Name = "txt_Raza"
+        Me.txt_Raza.Size = New System.Drawing.Size(206, 22)
+        Me.txt_Raza.TabIndex = 29
         '
         'cmd_Eliminar
         '
@@ -245,16 +226,8 @@ Partial Class frmAdminAnimales
         Me.cmd_Agregar.Text = "Agregar"
         Me.cmd_Agregar.UseVisualStyleBackColor = True
         '
-        'txt_Peso
-        '
-        Me.txt_Peso.Location = New System.Drawing.Point(54, 235)
-        Me.txt_Peso.Name = "txt_Peso"
-        Me.txt_Peso.Size = New System.Drawing.Size(72, 22)
-        Me.txt_Peso.TabIndex = 25
-        '
         'cbo_LugarActual
         '
-        Me.cbo_LugarActual.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_LugarActual.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_LugarActual.FormattingEnabled = True
         Me.cbo_LugarActual.Items.AddRange(New Object() {"Establecimiento", "Campo de recria"})
@@ -298,7 +271,6 @@ Partial Class frmAdminAnimales
         '
         'cbo_TipoAnimal
         '
-        Me.cbo_TipoAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbo_TipoAnimal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo_TipoAnimal.FormattingEnabled = True
         Me.cbo_TipoAnimal.Items.AddRange(New Object() {"Vaca", "Toro", "Cria", "Animal no productivo"})
@@ -315,17 +287,6 @@ Partial Class frmAdminAnimales
         Me.cbo_Establecimientos.Name = "cbo_Establecimientos"
         Me.cbo_Establecimientos.Size = New System.Drawing.Size(213, 23)
         Me.cbo_Establecimientos.TabIndex = 17
-        '
-        'cbo_Raza
-        '
-        Me.cbo_Raza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Raza.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbo_Raza.FormattingEnabled = True
-        Me.cbo_Raza.Items.AddRange(New Object() {"Holando", "Jersey", "Primer Show"})
-        Me.cbo_Raza.Location = New System.Drawing.Point(53, 63)
-        Me.cbo_Raza.Name = "cbo_Raza"
-        Me.cbo_Raza.Size = New System.Drawing.Size(119, 24)
-        Me.cbo_Raza.TabIndex = 16
         '
         'txt_Nombre
         '
@@ -355,15 +316,15 @@ Partial Class frmAdminAnimales
         Me.txt_NroIdentificador2.Size = New System.Drawing.Size(57, 22)
         Me.txt_NroIdentificador2.TabIndex = 13
         '
-        'cmd_Cancelar
+        'cmd_Volver
         '
-        Me.cmd_Cancelar.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_Cancelar.Location = New System.Drawing.Point(267, 358)
-        Me.cmd_Cancelar.Name = "cmd_Cancelar"
-        Me.cmd_Cancelar.Size = New System.Drawing.Size(75, 28)
-        Me.cmd_Cancelar.TabIndex = 14
-        Me.cmd_Cancelar.Text = "Cancelar"
-        Me.cmd_Cancelar.UseVisualStyleBackColor = True
+        Me.cmd_Volver.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_Volver.Location = New System.Drawing.Point(267, 358)
+        Me.cmd_Volver.Name = "cmd_Volver"
+        Me.cmd_Volver.Size = New System.Drawing.Size(75, 28)
+        Me.cmd_Volver.TabIndex = 14
+        Me.cmd_Volver.Text = "Volver"
+        Me.cmd_Volver.UseVisualStyleBackColor = True
         '
         'frmAdminAnimales
         '
@@ -372,7 +333,7 @@ Partial Class frmAdminAnimales
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(354, 394)
-        Me.Controls.Add(Me.cmd_Cancelar)
+        Me.Controls.Add(Me.cmd_Volver)
         Me.Controls.Add(Me.panel_Animal)
         Me.Controls.Add(Me.cmd_Buscar)
         Me.Controls.Add(Me.txt_NroIdentificador1)
@@ -398,22 +359,19 @@ Partial Class frmAdminAnimales
     Friend WithEvents lbl_Sexo As System.Windows.Forms.Label
     Friend WithEvents lbl_TipoAnimal As System.Windows.Forms.Label
     Friend WithEvents lbl_LugarActual As System.Windows.Forms.Label
-    Friend WithEvents lbl_Peso As System.Windows.Forms.Label
-    Friend WithEvents lbl_Kg As System.Windows.Forms.Label
     Friend WithEvents panel_Animal As System.Windows.Forms.Panel
     Friend WithEvents cmd_Eliminar As System.Windows.Forms.Button
     Friend WithEvents cmd_Modificar As System.Windows.Forms.Button
     Friend WithEvents cmd_Agregar As System.Windows.Forms.Button
-    Friend WithEvents txt_Peso As System.Windows.Forms.TextBox
     Friend WithEvents cbo_LugarActual As System.Windows.Forms.ComboBox
     Friend WithEvents rdo_Hembra As System.Windows.Forms.RadioButton
     Friend WithEvents rdo_Macho As System.Windows.Forms.RadioButton
     Friend WithEvents date_FechaNac As System.Windows.Forms.DateTimePicker
     Friend WithEvents cbo_TipoAnimal As System.Windows.Forms.ComboBox
     Friend WithEvents cbo_Establecimientos As System.Windows.Forms.ComboBox
-    Friend WithEvents cbo_Raza As System.Windows.Forms.ComboBox
     Friend WithEvents txt_Nombre As System.Windows.Forms.TextBox
     Friend WithEvents cmd_Verificar As System.Windows.Forms.Button
     Friend WithEvents txt_NroIdentificador2 As System.Windows.Forms.TextBox
-    Friend WithEvents cmd_Cancelar As System.Windows.Forms.Button
+    Friend WithEvents cmd_Volver As System.Windows.Forms.Button
+    Friend WithEvents txt_Raza As System.Windows.Forms.TextBox
 End Class

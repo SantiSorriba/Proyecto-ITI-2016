@@ -26,7 +26,6 @@ Partial Class frmPrincipal
         Me.menu_Archivo = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_Ingresar = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_CerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menu_Idioma = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_Salir = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_Establecimientos = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_AdministrarEstablecimientos = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,7 +54,7 @@ Partial Class frmPrincipal
         '
         'menu_Archivo
         '
-        Me.menu_Archivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_Ingresar, Me.menu_CerrarSesion, Me.menu_Idioma, Me.menu_Salir})
+        Me.menu_Archivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_Ingresar, Me.menu_CerrarSesion, Me.menu_Salir})
         Me.menu_Archivo.Name = "menu_Archivo"
         Me.menu_Archivo.Size = New System.Drawing.Size(60, 20)
         Me.menu_Archivo.Text = "Archivo"
@@ -63,25 +62,19 @@ Partial Class frmPrincipal
         'menu_Ingresar
         '
         Me.menu_Ingresar.Name = "menu_Ingresar"
-        Me.menu_Ingresar.Size = New System.Drawing.Size(143, 22)
+        Me.menu_Ingresar.Size = New System.Drawing.Size(152, 22)
         Me.menu_Ingresar.Text = "Ingresar"
         '
         'menu_CerrarSesion
         '
         Me.menu_CerrarSesion.Name = "menu_CerrarSesion"
-        Me.menu_CerrarSesion.Size = New System.Drawing.Size(143, 22)
+        Me.menu_CerrarSesion.Size = New System.Drawing.Size(152, 22)
         Me.menu_CerrarSesion.Text = "Cerrar Sesión"
-        '
-        'menu_Idioma
-        '
-        Me.menu_Idioma.Name = "menu_Idioma"
-        Me.menu_Idioma.Size = New System.Drawing.Size(143, 22)
-        Me.menu_Idioma.Text = "Idioma"
         '
         'menu_Salir
         '
         Me.menu_Salir.Name = "menu_Salir"
-        Me.menu_Salir.Size = New System.Drawing.Size(143, 22)
+        Me.menu_Salir.Size = New System.Drawing.Size(152, 22)
         Me.menu_Salir.Text = "Salir"
         '
         'menu_Establecimientos
@@ -173,7 +166,8 @@ Partial Class frmPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(1284, 662)
+        Me.BackgroundImage = Global.SIGAT.My.Resources.Resources.fondo1
+        Me.ClientSize = New System.Drawing.Size(1284, 692)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.menu_Principal)
@@ -193,7 +187,6 @@ Partial Class frmPrincipal
     Friend WithEvents menu_Archivo As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menu_Ingresar As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menu_CerrarSesion As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents menu_Idioma As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menu_Salir As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menu_Establecimientos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menu_AdministrarEstablecimientos As System.Windows.Forms.ToolStripMenuItem

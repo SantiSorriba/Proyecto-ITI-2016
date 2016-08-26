@@ -72,6 +72,9 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Altas.vb" />
+    <Compile Include="Bajas.vb" />
+    <Compile Include="Busquedas.vb" />
     <Compile Include="Conexión.vb" />
     <Compile Include="Cosas.vb" />
     <Compile Include="frmAdminAnimales.Designer.vb">
@@ -96,12 +99,6 @@
       <DependentUpon>frmEventos.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEventos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmIdioma.Designer.vb">
-      <DependentUpon>frmIdioma.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmIdioma.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIngresar.Designer.vb">
@@ -141,6 +138,7 @@
     <Compile Include="frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modificaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEventos.resx">
       <DependentUpon>frmEventos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmIdioma.resx">
-      <DependentUpon>frmIdioma.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresar.resx">
       <DependentUpon>frmIngresar.vb</DependentUpon>
@@ -219,6 +214,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
