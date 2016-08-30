@@ -22,6 +22,7 @@ Partial Class frmInventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventario))
         Me.lbl_Establecimiento = New System.Windows.Forms.Label()
         Me.cbo_Establecimientos = New System.Windows.Forms.ComboBox()
         Me.lbl_Mostrar = New System.Windows.Forms.Label()
@@ -99,11 +100,11 @@ Partial Class frmInventario
         '
         'cmd_Volver
         '
-        Me.cmd_Volver.Location = New System.Drawing.Point(419, 440)
+        Me.cmd_Volver.Image = CType(resources.GetObject("cmd_Volver.Image"), System.Drawing.Image)
+        Me.cmd_Volver.Location = New System.Drawing.Point(527, 284)
         Me.cmd_Volver.Name = "cmd_Volver"
-        Me.cmd_Volver.Size = New System.Drawing.Size(75, 25)
+        Me.cmd_Volver.Size = New System.Drawing.Size(41, 40)
         Me.cmd_Volver.TabIndex = 7
-        Me.cmd_Volver.Text = "Volver"
         Me.cmd_Volver.UseVisualStyleBackColor = True
         '
         'frmInventario
@@ -112,7 +113,7 @@ Partial Class frmInventario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(506, 472)
+        Me.ClientSize = New System.Drawing.Size(644, 472)
         Me.Controls.Add(Me.cmd_Volver)
         Me.Controls.Add(Me.grid_Animales)
         Me.Controls.Add(Me.cmd_Listar)

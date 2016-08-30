@@ -22,6 +22,7 @@ Partial Class frmIngresar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmIngresar))
         Me.cmd_Cancelar = New System.Windows.Forms.Button()
         Me.cmd_Ingresar = New System.Windows.Forms.Button()
         Me.txt_Contrasenia = New System.Windows.Forms.TextBox()
@@ -43,11 +44,11 @@ Partial Class frmIngresar
         'cmd_Ingresar
         '
         Me.cmd_Ingresar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_Ingresar.Location = New System.Drawing.Point(12, 83)
+        Me.cmd_Ingresar.Image = CType(resources.GetObject("cmd_Ingresar.Image"), System.Drawing.Image)
+        Me.cmd_Ingresar.Location = New System.Drawing.Point(12, 97)
         Me.cmd_Ingresar.Name = "cmd_Ingresar"
-        Me.cmd_Ingresar.Size = New System.Drawing.Size(118, 27)
+        Me.cmd_Ingresar.Size = New System.Drawing.Size(56, 52)
         Me.cmd_Ingresar.TabIndex = 3
-        Me.cmd_Ingresar.Text = "Ingresar"
         Me.cmd_Ingresar.UseVisualStyleBackColor = True
         '
         'txt_Contrasenia
@@ -95,7 +96,7 @@ Partial Class frmIngresar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(284, 122)
+        Me.ClientSize = New System.Drawing.Size(284, 161)
         Me.Controls.Add(Me.cmd_Cancelar)
         Me.Controls.Add(Me.cmd_Ingresar)
         Me.Controls.Add(Me.txt_Contrasenia)

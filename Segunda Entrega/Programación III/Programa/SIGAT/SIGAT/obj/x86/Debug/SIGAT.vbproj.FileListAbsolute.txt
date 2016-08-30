@@ -59,3 +59,23 @@ F:\Programacion\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmPrincipal.resources
 F:\Programacion\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmUsuarios.resources
 F:\Programacion\SIGAT\SIGAT\obj\x86\Debug\SIGAT.Resources.resources
 F:\Programacion\SIGAT\SIGAT\obj\x86\Debug\SIGAT.vbproj.GenerateResource.Cache
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\Interop.ADODB.dll
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.vbproj.ResolveComReference.cache
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.exe
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.xml
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.pdb
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\bin\Debug\SIGAT.exe
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\bin\Debug\SIGAT.pdb
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\bin\Debug\SIGAT.xml
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmAdminAnimales.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmConsultarProduccion.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmEstablecimientos.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmEventos.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmIngresar.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmInventario.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmLotes.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmOrdenies.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmPrincipal.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.frmUsuarios.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.Resources.resources
+C:\Users\Santiago\Desktop\Repositorio\Segunda Entrega\Programación III\Programa\SIGAT\SIGAT\obj\x86\Debug\SIGAT.vbproj.GenerateResource.Cache
